@@ -1,0 +1,252 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+#script: !include scripts.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+    
+discovery:
+#   ignore:
+#     - yeelight
+
+# yeelight:
+#   devices:
+#     192.168.1.23:
+#       name: 燈
+#     192.168.1.24:
+#       name: 燈2
+#     192.168.1.4:
+#       name: 燈3
+    
+light:
+  - platform: group
+    name: 走廊燈
+    entities:
+    - light.lightbulb_6983
+    - light.lightbulb_aab5
+    
+  - platform: switch
+    name: 客廳燈1
+    entity_id: switch.wall_switch_a6b8_2
+    
+  - platform: switch
+    name: 客廳燈2
+    entity_id: switch.wall_switch_a6b8
+  
+input_select:
+  kiosk_mode:
+    name: kiosk
+    options:
+      - true
+      - false
+homekit:
+  filter:
+    exclude_domains:
+      - automation
+      - device_tracker
+    exclude_entities:
+      - binary_sensor.updater
+      - binary_sensor.deng_nightlight
+      - binary_sensor.deng_2_nightlight
+      - binary_sensor.deng_3_nightlight
+      - light.zou_lang_deng
+      - switch.wall_switch_a6b8_2
+      - switch.wall_switch_a6b8
+      
+remote:
+  - platform: xiaomi_miio
+    host: 192.168.1.9
+    name: "遙控器"
+    token: !secret miio_token
+    timeout: 30
+    hidden: false
+    commands:
+      activate_tv_on_off:
+        command:
+          - raw:mc0mUwlkxm84mEsmc5mEsmgA7TGZzUBDQB/AH8AfwB/AH8GDwB/AH8AfwB/BQ8AfwB/AH8EjwEGmkxAQOZgEeAR8smgGZAD2Ax4GXgEILwQFfgM7MIAA
+      activate_tv_switch:
+        command:
+          - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+Ch4A/gD+AP4JHgIPNAEDmAFPgD+CD4RXAIeAP4FHzCWTCAA=
+      activate_tv_volume_up:
+        command:
+          - raw:mc0mswlkxm4AhTSZABkAO0xmYBhgIUAOkxAH8B/wB/Af8AeQYPAo8A/wB/AH8FBgGPAH8FjwF/AH8AfwcPBI8AfwB/BA8EDAEImEAA==
+      activate_tv_volume_down:
+        command:
+          - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+CgUzAY8AfwB/AH8EjwIPAo8Cjw2/AY8AfwKPAQqYQAA=
+      activate_fan:
+        command:
+          - raw:mcxm0wlkxm0zmEsmU4AIKZTcAggETmU0ARWaTUAfwKXAg8BiAQjAMICHwEPAY8CHwGfAZ8BB5lMJZM5iCp4A/gg+APYIBh/lMZjOQSWDAYCjwB/AHgDwggbmMyAMIBA5jMgm/APYIvwB0AoQCAgrPAQYDo5gD54QnheeAP4NND4tNAAyGtUDiYAA
+
+
+
+script:
+  tv_on_off:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 
+            - 'activate_tv_on_off'
+  tv_switch:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 
+            - 'activate_tv_switch'
+  tv_volume_up:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_up'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_up'  
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_up'
+  tv_volume_down:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_down'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_down'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_tv_volume_down'
+  tv_tv:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+  tv_appletv:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command: 'activate_tv_switch'  
+  fan:
+    sequence:
+      - service: remote.send_command
+        entity_id: 'remote.yao_kong_qi'
+        data:
+          command:
+            - 'activate_fan'       
+homeassistant:
+  customize:
+    script.tv_on_off:
+      friendly_name: 電視
+      homebridge_name: 電視
+    script.tv_switch:
+      friendly_name: 電視轉台
+      homebridge_name: 電視轉台
+    script.tv_volume_up:
+      friendly_name: 音量大
+      homebridge_name: 音量大
+    script.tv_volume_down:
+      friendly_name: 音量小
+      homebridge_name: 音量小
+    script.tv_tv:
+      friendly_name: 轉睇電視
+      homebridge_name: 轉睇電視
+    script.tv_appletv:
+      friendly_name: 轉睇apple TV
+      homebridge_name: 轉睇apple TV
+    script.fan:
+      friendly_name: 風扇
+      homebridge_name: 風扇
+ 
+device_tracker:
+   - platform: ping
+     hosts: 
+       andrew: !secret andrew_ip
+       sis: !secret sis_ip
+       mum: !secret mum_ip
+       dad: !secret dad_ip
+     interval_seconds: 30
+     consider_home: 180
+     
+   - platform: bluetooth_tracker
+     interval_seconds: 30
+     consider_home: 180
+     track_new_devices: yes
+       
+       
+#sensor:
+#    - platform: mitemp_bt
+#      mac: 'DE:B9:90:7F:80:7F'
+#      name: 吉他濕度
+#      force_update: true
+#      median: 1
+#      monitored_conditions:
+#        - temperature
+#        - humidity
+
+    

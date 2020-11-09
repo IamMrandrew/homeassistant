@@ -1,0 +1,7 @@
+secrets.yaml
+known_devices.yaml
+home-assistant_v2.db
+.storage
+.cloud
+custom_components
+www

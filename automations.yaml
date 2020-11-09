@@ -1,0 +1,182 @@
+- id: '1604501019289'
+  alias: 自動化/走廊燈
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 76166037abf04555ab540f1d7963ce3d
+    entity_id: binary_sensor.motion_sensor_0c67
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: time
+    after: '18:00'
+    before: 06:00
+  action:
+  - domain: light
+    entity_id: light.lightbulb_6983
+    device_id: fb87377bac0d4082aa96893b9e014072
+    type: turn_on
+    brightness_pct: 25
+  - type: turn_on
+    device_id: 6bc6ab65e2a84e75b54059da7c23edee
+    entity_id: light.lightbulb_aab5
+    domain: light
+    brightness_pct: 25
+  - delay: '65'
+  - type: turn_off
+    device_id: fb87377bac0d4082aa96893b9e014072
+    entity_id: light.lightbulb_6983
+    domain: light
+  - type: turn_off
+    device_id: 6bc6ab65e2a84e75b54059da7c23edee
+    entity_id: light.lightbulb_aab5
+    domain: light
+  mode: single
+- id: '1604509895805'
+  alias: 自動化/夜燈
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: c3c47321f9bc4739a77b9bb0f3de6a6e
+    entity_id: binary_sensor.motion_sensor_2c8a
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: 00:00
+    before: 06:00
+  - condition: device
+    type: is_off
+    device_id: 79adf000e08313b432d6e070f98b451e
+    entity_id: light.deng
+    domain: light
+  action:
+  - type: turn_on
+    device_id: aff29ed2b68e4ce68e492d19bb944c45
+    entity_id: light.aqara_hub_a429
+    domain: light
+    brightness_pct: 20
+  - type: turn_on
+    device_id: 220444ca564a41077e68417f328e28c5
+    entity_id: light.mibedsidelamp2_5a9b
+    domain: light
+    brightness_pct: 20
+  - delay: '30'
+  - type: turn_off
+    device_id: aff29ed2b68e4ce68e492d19bb944c45
+    entity_id: light.aqara_hub_a429
+    domain: light
+  - type: turn_off
+    device_id: 220444ca564a41077e68417f328e28c5
+    entity_id: light.mibedsidelamp2_5a9b
+    domain: light
+  mode: single
+- id: '1604758641899'
+  alias: 自動化/ 全部人離家
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.iammrandrew
+    from: home
+    to: not_home
+  - platform: state
+    entity_id: person.mum
+    from: home
+    to: not_home
+  - platform: state
+    entity_id: person.dad
+    from: home
+    to: not_home
+  - platform: state
+    entity_id: person.sis
+    from: home
+    to: not_home
+  condition:
+  - condition: state
+    entity_id: person.iammrandrew
+    state: not_home
+  - condition: state
+    entity_id: person.dad
+    state: not_home
+  - condition: state
+    entity_id: person.mum
+    state: not_home
+  - condition: state
+    entity_id: person.sis
+    state: not_home
+  action:
+  - device_id: aff29ed2b68e4ce68e492d19bb944c45
+    domain: alarm_control_panel
+    entity_id: alarm_control_panel.aqara_hub_a429
+    type: arm_away
+    code: ''
+  mode: single
+- id: '1604847157879'
+  alias: 切換 燈II
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 0ba3d78917c14c6aa7e7c3da7e95a15a
+    domain: homekit_controller
+    type: button1
+    subtype: single_press
+  condition: []
+  action:
+  - type: toggle
+    device_id: d76c1dc8de8565982265981f9f6f8752
+    entity_id: light.deng_2
+    domain: light
+  mode: single
+- id: '1604926108849'
+  alias: 切換 燈III
+  description: ''
+  trigger:
+  - platform: device
+    device_id: d15fc103b5134bdda55a4f9443041f4d
+    domain: homekit_controller
+    type: button1
+    subtype: single_press
+  condition: []
+  action:
+  - type: toggle
+    device_id: cf81820e7637452f49c1233601f0be60
+    entity_id: light.deng_3
+    domain: light
+  mode: single
+- id: '1604926952342'
+  alias: 自動化/ 有人回家
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.iammrandrew
+    from: not_home
+    to: home
+  - platform: state
+    entity_id: person.dad
+    from: not_home
+    to: home
+  - platform: state
+    entity_id: person.mum
+    from: not_home
+    to: home
+  - platform: state
+    entity_id: person.sis
+    from: not_home
+    to: home
+  condition:
+  - condition: device
+    device_id: aff29ed2b68e4ce68e492d19bb944c45
+    domain: alarm_control_panel
+    entity_id: alarm_control_panel.aqara_hub_a429
+    type: is_armed_away
+  action:
+  - device_id: aff29ed2b68e4ce68e492d19bb944c45
+    domain: alarm_control_panel
+    entity_id: alarm_control_panel.aqara_hub_a429
+    type: disarm
+    code: ''
+  mode: single
