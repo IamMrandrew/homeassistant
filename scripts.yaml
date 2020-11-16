@@ -1,0 +1,103 @@
+tv_on_off:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 
+          - 'activate_tv_on_off'
+tv_switch:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 
+          - 'activate_tv_switch'
+tv_volume_up:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_up'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_up'  
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_up'
+tv_volume_down:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_down'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_down'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_down'
+tv_tv:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+tv_appletv:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 'activate_tv_switch'  
+fan:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_fan'       

@@ -12,9 +12,12 @@
       minutes: 0
       seconds: 0
   condition:
-  - condition: time
-    after: '18:00'
-    before: 06:00
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+    - condition: sun
+      before: sunrise
   action:
   - domain: light
     entity_id: light.lightbulb_6983

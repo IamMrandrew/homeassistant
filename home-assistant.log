@@ -1,2 +1,14 @@
-2020-11-09 23:59:56 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-10 00:00:07 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.519 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-11-15 17:38:30 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-15 18:49:59 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1770928160] Client unable to keep up with pending messages. Stayed over 512 for 5 seconds
+2020-11-15 23:56:57 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 00:06:53 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 01:55:09 ERROR (SyncWorker_42) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: A socket error occurred when sending the command.
+2020-11-16 01:55:12 ERROR (MainThread) [homeassistant.components.ipp] Error fetching ipp data: Invalid response from API: Timeout occurred while connecting to IPP server.
+2020-11-16 18:30:29 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 18:55:46 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 20:17:01 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 20:30:06 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 20:35:12 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 21:05:17 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-16 21:36:19 ERROR (SyncWorker_0) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
+2020-11-16 22:48:44 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running

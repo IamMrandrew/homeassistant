@@ -16,23 +16,12 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-#script: !include scripts.yaml
+script: !include scripts.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
     
 discovery:
-#   ignore:
-#     - yeelight
-
-# yeelight:
-#   devices:
-#     192.168.1.23:
-#       name: 燈
-#     192.168.1.24:
-#       name: 燈2
-#     192.168.1.4:
-#       name: 燈3
     
 light:
   - platform: group
@@ -62,8 +51,8 @@ homekit:
       - device_tracker
     exclude_entities:
       - binary_sensor.updater
-      - binary_sensor.deng_nightlight
-      - binary_sensor.deng_2_nightlight
+      - binary_sensor.yeelight_ceiling1_0x0000000007c50fc5_nightlight
+      - binary_sensor.2_nightlight
       - binary_sensor.deng_3_nightlight
       - light.zou_lang_deng
       - switch.wall_switch_a6b8_2
@@ -93,112 +82,7 @@ remote:
         command:
           - raw:mcxm0wlkxm0zmEsmU4AIKZTcAggETmU0ARWaTUAfwKXAg8BiAQjAMICHwEPAY8CHwGfAZ8BB5lMJZM5iCp4A/gg+APYIBh/lMZjOQSWDAYCjwB/AHgDwggbmMyAMIBA5jMgm/APYIvwB0AoQCAgrPAQYDo5gD54QnheeAP4NND4tNAAyGtUDiYAA
 
-
-
-script:
-  tv_on_off:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 
-            - 'activate_tv_on_off'
-  tv_switch:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 
-            - 'activate_tv_switch'
-  tv_volume_up:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_up'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_up'  
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_up'
-  tv_volume_down:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_down'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_down'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_tv_volume_down'
-  tv_tv:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-  tv_appletv:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command: 'activate_tv_switch'  
-  fan:
-    sequence:
-      - service: remote.send_command
-        entity_id: 'remote.yao_kong_qi'
-        data:
-          command:
-            - 'activate_fan'       
+ 
 homeassistant:
   customize:
     script.tv_on_off:
@@ -236,17 +120,6 @@ device_tracker:
    - platform: bluetooth_tracker
      interval_seconds: 30
      consider_home: 180
-     track_new_devices: yes
+    # track_new_devices: yes
        
-       
-#sensor:
-#    - platform: mitemp_bt
-#      mac: 'DE:B9:90:7F:80:7F'
-#      name: 吉他濕度
-#      force_update: true
-#      median: 1
-#      monitored_conditions:
-#        - temperature
-#        - humidity
-
     
