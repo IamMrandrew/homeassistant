@@ -1,14 +1,1538 @@
-2020-11-15 17:38:30 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-15 18:49:59 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1770928160] Client unable to keep up with pending messages. Stayed over 512 for 5 seconds
-2020-11-15 23:56:57 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 00:06:53 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 01:55:09 ERROR (SyncWorker_42) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: A socket error occurred when sending the command.
-2020-11-16 01:55:12 ERROR (MainThread) [homeassistant.components.ipp] Error fetching ipp data: Invalid response from API: Timeout occurred while connecting to IPP server.
-2020-11-16 18:30:29 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 18:55:46 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 20:17:01 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 20:30:06 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 20:35:12 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 21:05:17 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-16 21:36:19 ERROR (SyncWorker_0) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
-2020-11-16 22:48:44 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-17 18:35:01 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-17 18:35:15 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.406 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-11-17 18:38:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:38:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:08 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:08 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:10 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:10 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:12 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:12 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:13 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:13 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:32 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:32 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:33 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:33 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:33 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:44:33 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:37 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:37 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:41 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:41 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:44 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:44 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:45 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:45 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:50 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:50 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:45:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:46:25 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:46:25 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:46:25 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:46:25 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:37 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:37 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:38 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:38 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:38 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:38 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:42 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:42 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:42 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:42 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:43 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:45 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:45 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:46 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:48 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:48 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:48 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:48 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:49 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:51 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:52 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:53 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:53 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:50:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:51:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:51:11 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:51:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 2: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:51:54 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:52:12 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:52:12 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:54:13 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 18:54:13 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 19:03:31 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] 自動化/夜燈2: Error executing script. Invalid data for call_service at pos 1: not a valid value for dictionary value @ data['entity_id']
+2020-11-17 19:03:31 ERROR (MainThread) [homeassistant.components.automation.zi_dong_hua_ye_deng_2] While executing automation automation.zi_dong_hua_ye_deng_2
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 426, in async_trigger
+    await self.action_script.async_run(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1010, in async_run
+    await asyncio.shield(run.async_run())
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 245, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 253, in _async_step
+    await getattr(
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 460, in _async_call_service_step
+    await service_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1402, in async_call
+    processed_data = handler.schema(service_data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 218, in __call__
+    return self._exec((Schema(val) for val in self.validators), v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 340, in _exec
+    raise e if self.msg is None else AllInvalid(self.msg, path=path)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/validators.py", line 336, in _exec
+    v = func(v)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 817, in validate_callable
+    return schema(data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 272, in __call__
+    return self._compiled([], data)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 594, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/usr/local/lib/python3.8/site-packages/voluptuous/schema_builder.py", line 432, in validate_mapping
+    raise er.MultipleInvalid(errors)
+voluptuous.error.MultipleInvalid: not a valid value for dictionary value @ data['entity_id']
