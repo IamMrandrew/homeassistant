@@ -22,6 +22,20 @@ frontend:
   themes: !include_dir_merge_named themes
     
 discovery:
+
+homekit:
+  filter:
+    exclude_domains:
+      - automation
+      - device_tracker
+    exclude_entities:
+      - binary_sensor.updater
+      - binary_sensor.yeelight_ceiling1_0x0000000007c50fc5_nightlight
+      - binary_sensor.2_nightlight
+      - binary_sensor.deng_3_nightlight
+      - light.zou_lang_deng
+      - switch.wall_switch_a6b8_2
+      - switch.wall_switch_a6b8
     
 light:
   - platform: group
@@ -37,26 +51,28 @@ light:
   - platform: switch
     name: 客廳燈2
     entity_id: switch.wall_switch_a6b8
-  
+
+device_tracker:
+   - platform: ping
+     hosts: 
+       andrew: !secret andrew_ip
+       sis: !secret sis_ip
+       mum: !secret mum_ip
+       dad: !secret dad_ip
+     interval_seconds: 30
+     consider_home: 180
+     
+   - platform: bluetooth_tracker
+     interval_seconds: 30
+     consider_home: 180
+    # track_new_devices: yes
+
 input_select:
   kiosk_mode:
     name: kiosk
     options:
       - true
       - false
-homekit:
-  filter:
-    exclude_domains:
-      - automation
-      - device_tracker
-    exclude_entities:
-      - binary_sensor.updater
-      - binary_sensor.yeelight_ceiling1_0x0000000007c50fc5_nightlight
-      - binary_sensor.2_nightlight
-      - binary_sensor.deng_3_nightlight
-      - light.zou_lang_deng
-      - switch.wall_switch_a6b8_2
-      - switch.wall_switch_a6b8
       
 remote:
   - platform: xiaomi_miio
@@ -107,19 +123,5 @@ homeassistant:
       friendly_name: 風扇
       homebridge_name: 風扇
  
-device_tracker:
-   - platform: ping
-     hosts: 
-       andrew: !secret andrew_ip
-       sis: !secret sis_ip
-       mum: !secret mum_ip
-       dad: !secret dad_ip
-     interval_seconds: 30
-     consider_home: 180
-     
-   - platform: bluetooth_tracker
-     interval_seconds: 30
-     consider_home: 180
-    # track_new_devices: yes
        
     
