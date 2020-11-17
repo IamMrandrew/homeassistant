@@ -89,16 +89,19 @@
     domain: binary_sensor
   condition: []
   action:
-  - service: input_boolean.turn_on
+  - service: >-
+      {% if is_state("light.mibedsidelamp2_5a9b", "on") %}
+        input_boolean.turn_on
+      {% elif is_state("light.mibedsidelamp2_5a9b", "off" $}
+        input_boolean.turn_off
+      {% endif %}
     data:
       entity_id: >-
         {% if is_state("light.mibedsidelamp2_5a9b", "on") %}
           input_boolean.bedside_lamp
+        {% elif is_state("light.mibedsidelamp2_5a9b", "off" $}
+          input_boolean.bedside_lamp
         {% endif %}
-  - service: input_boolean.turn_off
-    data:
-      entity_id: input_boolean.bedside_lamp
-        
   - type: turn_on
     device_id: aff29ed2b68e4ce68e492d19bb944c45
     entity_id: light.aqara_hub_a429
@@ -109,6 +112,8 @@
       entity_id: >-
         {% if is_state("input_boolean.bedside_lamp", "off") %}
           light.mibedsidelamp2_5a9b
+        {% else %}
+          none
         {% endif %}
       brightness_pct: 20
   - delay: '30'
@@ -121,6 +126,8 @@
       entity_id: >-
         {% if is_state("input_boolean.bedside_lamp", "off") %}
           light.mibedsidelamp2_5a9b
+        {% else %}
+          none
         {% endif %}
   mode: single
 - id: '1604758641899'
