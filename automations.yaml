@@ -78,6 +78,61 @@
     entity_id: light.mibedsidelamp2_5a9b
     domain: light
   mode: single
+- id: '1604509895809'
+  alias: 自動化/夜燈2
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: c3c47321f9bc4739a77b9bb0f3de6a6e
+    entity_id: binary_sensor.motion_sensor_2c8a
+    domain: binary_sensor
+  condition:
+  # - condition: time
+  #   after: 00:00
+  #   before: 06:00
+  - condition: device
+    type: is_off
+    device_id: 79adf000e08313b432d6e070f98b451e
+    entity_id: light.deng
+    domain: light
+  action:
+  - serivce: input_boolean.turn_on
+    data:
+      entity_id: >
+        {% if is_state("light.mibedsidelamp2_5a9b", "on") -%}
+          input_boolean.bedside_lamp
+        {% endif %}
+  - serivce: input_boolean.turn_off
+    data:
+      entity_id: >
+        {% if is_state("light.mibedsidelamp2_5a9b", "off") -%}
+          input_boolean.bedside_lamp
+        {% endif %}
+  - type: turn_on
+    device_id: aff29ed2b68e4ce68e492d19bb944c45
+    entity_id: light.aqara_hub_a429
+    domain: light
+    brightness_pct: 20
+  - service: light.turn_on
+    data:
+      entity_id: >
+        {% if is_state("input_boolean.bedside_lamp", "off")}
+          light.mibedsidelamp2_5a9b
+        {% endif %}
+      brightness_pct: 20
+  - delay: '30'
+  - type: turn_off
+    device_id: aff29ed2b68e4ce68e492d19bb944c45
+    entity_id: light.aqara_hub_a429
+    domain: light
+  - service: light.turn_off
+    data:
+      entity_id: >
+        {% if is_state("input_boolean.bedside_lamp", "off")}
+          light.mibedsidelamp2_5a9b
+        {% endif %}
+  mode: single
 - id: '1604758641899'
   alias: 自動化/ 全部人離家
   description: ''
