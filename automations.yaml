@@ -97,10 +97,8 @@
         {% endif %}
   - service: input_boolean.turn_off
     data:
-      entity_id: >-
-        {% if is_state("light.mibedsidelamp2_5a9b", "off") %}
-          input_boolean.bedside_lamp
-        {% endif %}
+      entity_id: input_boolean.bedside_lamp
+        
   - type: turn_on
     device_id: aff29ed2b68e4ce68e492d19bb944c45
     entity_id: light.aqara_hub_a429
