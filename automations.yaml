@@ -97,13 +97,13 @@
     entity_id: light.deng
     domain: light
   action:
-  - serivce: input_boolean.turn_on
+  - service: input_boolean.turn_on
     data:
       entity_id: >
         {% if is_state("light.mibedsidelamp2_5a9b", "on") -%}
           input_boolean.bedside_lamp
         {% endif %}
-  - serivce: input_boolean.turn_off
+  - service: input_boolean.turn_off
     data:
       entity_id: >
         {% if is_state("light.mibedsidelamp2_5a9b", "off") -%}
