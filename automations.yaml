@@ -79,7 +79,7 @@
     domain: light
   mode: single
 - id: '1604509895809'
-  alias: 自動化/夜燈2
+  alias: 自動化/夜燈 聰明啲
   description: ''
   trigger:
   - type: motion
@@ -87,7 +87,15 @@
     device_id: c3c47321f9bc4739a77b9bb0f3de6a6e
     entity_id: binary_sensor.motion_sensor_2c8a
     domain: binary_sensor
-  condition: []
+  condition: 
+  - condition: time
+    after: 00:00
+    before: 06:00
+  - condition: device
+    type: is_off
+    device_id: 79adf000e08313b432d6e070f98b451e
+    entity_id: light.deng
+    domain: light
   action:
   - service: >-
       {% if is_state("light.mibedsidelamp2_5a9b", "on") %}
