@@ -28,6 +28,7 @@ homekit:
     exclude_domains:
       - automation
       - device_tracker
+      - input_boolean
     exclude_entities:
       - binary_sensor.updater
       - binary_sensor.yeelight_ceiling1_0x0000000007c50fc5_nightlight
