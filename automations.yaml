@@ -39,8 +39,8 @@
     entity_id: light.lightbulb_aab5
     domain: light
   mode: single
-- id: '1604509895805'
-  alias: 自動化/夜燈
+- id: '1604509895809'
+  alias: 自動化/夜燈 聰明啲
   description: ''
   trigger:
   - type: motion
@@ -58,58 +58,13 @@
     entity_id: light.deng
     domain: light
   action:
-  - type: turn_on
-    device_id: aff29ed2b68e4ce68e492d19bb944c45
-    entity_id: light.aqara_hub_a429
-    domain: light
-    brightness_pct: 20
-  - type: turn_on
-    device_id: 220444ca564a41077e68417f328e28c5
-    entity_id: light.mibedsidelamp2_5a9b
-    domain: light
-    brightness_pct: 20
-  - delay: '30'
-  - type: turn_off
-    device_id: aff29ed2b68e4ce68e492d19bb944c45
-    entity_id: light.aqara_hub_a429
-    domain: light
-  - type: turn_off
-    device_id: 220444ca564a41077e68417f328e28c5
-    entity_id: light.mibedsidelamp2_5a9b
-    domain: light
-  mode: single
-- id: '1604509895809'
-  alias: 自動化/夜燈 聰明啲
-  description: ''
-  trigger:
-  - type: motion
-    platform: device
-    device_id: c3c47321f9bc4739a77b9bb0f3de6a6e
-    entity_id: binary_sensor.motion_sensor_2c8a
-    domain: binary_sensor
-  condition: 
-  - condition: time
-    after: 00:00
-    before: 06:00
-  - condition: device
-    type: is_off
-    device_id: 79adf000e08313b432d6e070f98b451e
-    entity_id: light.deng
-    domain: light
-  action:
-  - service: >-
-      {% if is_state("light.mibedsidelamp2_5a9b", "on") %}
-        input_boolean.turn_on
-      {% elif is_state("light.mibedsidelamp2_5a9b", "off") %}
-        input_boolean.turn_off
-      {% endif %}
+  - service: "{% if is_state(\"light.mibedsidelamp2_5a9b\", \"on\") %}\n  input_boolean.turn_on\n\
+      {% elif is_state(\"light.mibedsidelamp2_5a9b\", \"off\") %}\n  input_boolean.turn_off\n\
+      {% endif %}"
     data:
-      entity_id: >-
-        {% if is_state("light.mibedsidelamp2_5a9b", "on") %}
-          input_boolean.bedside_lamp
-        {% elif is_state("light.mibedsidelamp2_5a9b", "off") %}
-          input_boolean.bedside_lamp
-        {% endif %}
+      entity_id: "{% if is_state(\"light.mibedsidelamp2_5a9b\", \"on\") %}\n  input_boolean.bedside_lamp\n\
+        {% elif is_state(\"light.mibedsidelamp2_5a9b\", \"off\") %}\n  input_boolean.bedside_lamp\n\
+        {% endif %}"
   - type: turn_on
     device_id: aff29ed2b68e4ce68e492d19bb944c45
     entity_id: light.aqara_hub_a429
@@ -117,12 +72,8 @@
     brightness_pct: 20
   - service: light.turn_on
     data:
-      entity_id: >-
-        {% if is_state("input_boolean.bedside_lamp", "off") %}
-          light.mibedsidelamp2_5a9b
-        {% else %}
-          none
-        {% endif %}
+      entity_id: "{% if is_state(\"input_boolean.bedside_lamp\", \"off\") %}\n  light.mibedsidelamp2_5a9b\n\
+        {% else %}\n  none\n{% endif %}"
       brightness_pct: 20
   - delay: '30'
   - type: turn_off
@@ -131,12 +82,8 @@
     domain: light
   - service: light.turn_off
     data:
-      entity_id: >-
-        {% if is_state("input_boolean.bedside_lamp", "off") %}
-          light.mibedsidelamp2_5a9b
-        {% else %}
-          none
-        {% endif %}
+      entity_id: "{% if is_state(\"input_boolean.bedside_lamp\", \"off\") %}\n  light.mibedsidelamp2_5a9b\n\
+        {% else %}\n  none\n{% endif %}"
   mode: single
 - id: '1604758641899'
   alias: 自動化/ 全部人離家
@@ -242,4 +189,36 @@
     entity_id: alarm_control_panel.aqara_hub_a429
     type: disarm
     code: ''
+  mode: single
+- id: '1605772373191'
+  alias: 自動化/ 客廳燈
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 960def43bdadf821a599255047f2d8d8
+    entity_id: binary_sensor.motion_sensor_4bc0
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: 00:00
+    before: 06:00
+  action:
+  - type: turn_on
+    device_id: a7c64fcfe33519a075ae0d690f91a938
+    entity_id: switch.wall_switch_a6b8
+    domain: switch
+  - type: turn_on
+    device_id: a7c64fcfe33519a075ae0d690f91a938
+    entity_id: switch.wall_switch_a6b8_2
+    domain: switch
+  - delay: '30'
+  - type: turn_off
+    device_id: a7c64fcfe33519a075ae0d690f91a938
+    entity_id: switch.wall_switch_a6b8
+    domain: switch
+  - type: turn_off
+    device_id: a7c64fcfe33519a075ae0d690f91a938
+    entity_id: switch.wall_switch_a6b8_2
+    domain: switch
   mode: single

@@ -1,24 +1,2 @@
-2020-11-18 01:54:20 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-18 18:21:12 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 18:24:46 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 18:43:08 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 18:45:32 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 19:11:02 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 20:13:33 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 20:27:13 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 21:12:34 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
-2020-11-18 21:21:01 ERROR (Thread-11) [zeroconf] Unknown error, possibly benign: KeyError('home assistant bridge 9b14ab._hap._tcp.local.')
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/zeroconf/__init__.py", line 2550, in unregister_service
-    del self.services[info.name.lower()]
-KeyError: 'home assistant bridge 9b14ab._hap._tcp.local.'
-2020-11-18 21:21:01 ERROR (Thread-234) [zeroconf] Unknown error, possibly benign: KeyError('home assistant bridge 9b14ab._hap._tcp.local.')
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/zeroconf/__init__.py", line 2550, in unregister_service
-    del self.services[info.name.lower()]
-KeyError: 'home assistant bridge 9b14ab._hap._tcp.local.'
-2020-11-18 21:21:01 ERROR (Thread-225) [zeroconf] Unknown error, possibly benign: KeyError('home assistant bridge 9b14ab._hap._tcp.local.')
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/zeroconf/__init__.py", line 2550, in unregister_service
-    del self.services[info.name.lower()]
-KeyError: 'home assistant bridge 9b14ab._hap._tcp.local.'
+2020-11-19 16:20:16 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-19 16:20:27 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.484 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
