@@ -221,7 +221,7 @@
     device_id: a7c64fcfe33519a075ae0d690f91a938
     entity_id: switch.wall_switch_a6b8_2
     domain: switch
-  - delay: '30'
+  - delay: '60'
   - type: turn_off
     device_id: a7c64fcfe33519a075ae0d690f91a938
     entity_id: switch.wall_switch_a6b8
