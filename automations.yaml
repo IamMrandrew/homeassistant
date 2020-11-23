@@ -19,7 +19,7 @@
     device_id: 5ccfb965e666cdfbe0de82db564cc60c
     entity_id: sensor.0x00158d0004480c67_illuminance
     domain: sensor
-    below: 30
+    below: 38
   action:
   - domain: light
     entity_id: light.lightbulb_6983

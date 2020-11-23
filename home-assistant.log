@@ -1,4 +1,129 @@
-2020-11-23 18:58:47 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-23 18:58:47 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-23 18:58:58 WARNING (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook 0533bdc1efea9d1e427581e3f2f453108908fbf79048352a00237cd2a8898a14 from 219.78.24.106
-2020-11-23 18:59:00 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.765 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-11-23 20:57:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-23 20:57:33 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-23 20:57:44 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.472 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-11-23 20:58:31 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-23 21:29:30 WARNING (MainThread) [homeassistant.components.automation.turn_on_lights_when_motion_is_detected_in_corridor] 自動化/走廊燈: Already running
+2020-11-23 21:30:15 ERROR (MainThread) [homeassistant] Error doing job: Unclosed connection
+2020-11-23 21:30:28 ERROR (Recorder) [homeassistant] Error doing job: Unclosed connection
+2020-11-23 21:32:22 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:22 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:22 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: , template: {{ value_json.occupancy }})
+2020-11-23 21:32:22 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:22 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:35 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:35 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:35 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:35 WARNING (MainThread) [homeassistant.components.mqtt] Erroneous JSON: 
+2020-11-23 21:32:35 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: , template: {{ value_json.occupancy }})
+2020-11-23 21:38:42 ERROR (MainThread) [homeassistant.components.hassio] Invalid config for [automation]: required key not provided @ data['condition'][1]['device_id']. Got None. (See /config/configuration.yaml, line 17). 
+2020-11-23 21:46:16 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: required key not provided @ data['condition'][1]['device_id']. Got None
+required key not provided @ data['condition'][1]['domain']. Got None. (See /config/configuration.yaml, line 17). 
+2020-11-23 21:58:42 ERROR (SyncWorker_21) [homeassistant.util.yaml.loader] while scanning an alias
+  in "/config/configuration.yaml", line 44, column 9
+expected alphabetic or numeric character, but found '.'
+  in "/config/configuration.yaml", line 44, column 10
+2020-11-23 21:58:42 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1781998136] while scanning an alias
+  in "/config/configuration.yaml", line 44, column 9
+expected alphabetic or numeric character, but found '.'
+  in "/config/configuration.yaml", line 44, column 10
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 61, in load_yaml
+    return yaml.load(conf_file, Loader=SafeLineLoader) or OrderedDict()
+  File "/usr/local/lib/python3.8/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 50, in compose_node
+    node: yaml.nodes.Node = super().compose_node(parent, index)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 50, in compose_node
+    node: yaml.nodes.Node = super().compose_node(parent, index)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 50, in compose_node
+    node: yaml.nodes.Node = super().compose_node(parent, index)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 50, in compose_node
+    node: yaml.nodes.Node = super().compose_node(parent, index)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.8/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.8/site-packages/yaml/parser.py", line 379, in parse_block_sequence_first_entry
+    return self.parse_block_sequence_entry()
+  File "/usr/local/lib/python3.8/site-packages/yaml/parser.py", line 384, in parse_block_sequence_entry
+    if not self.check_token(BlockEntryToken, BlockEndToken):
+  File "/usr/local/lib/python3.8/site-packages/yaml/scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "/usr/local/lib/python3.8/site-packages/yaml/scanner.py", line 227, in fetch_more_tokens
+    return self.fetch_alias()
+  File "/usr/local/lib/python3.8/site-packages/yaml/scanner.py", line 610, in fetch_alias
+    self.tokens.append(self.scan_anchor(AliasToken))
+  File "/usr/local/lib/python3.8/site-packages/yaml/scanner.py", line 922, in scan_anchor
+    raise ScannerError("while scanning an %s" % name, start_mark,
+yaml.scanner.ScannerError: while scanning an alias
+  in "/config/configuration.yaml", line 44, column 9
+expected alphabetic or numeric character, but found '.'
+  in "/config/configuration.yaml", line 44, column 10
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 552, in admin_handler
+    await result
+  File "/usr/src/homeassistant/homeassistant/components/homekit/__init__.py", line 379, in _handle_homekit_reload
+    config = await async_integration_yaml_config(hass, DOMAIN)
+  File "/usr/src/homeassistant/homeassistant/helpers/reload.py", line 137, in async_integration_yaml_config
+    hass, await conf_util.async_hass_config_yaml(hass), integration
+  File "/usr/src/homeassistant/homeassistant/config.py", line 314, in async_hass_config_yaml
+    config = await hass.loop.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/config.py", line 329, in load_yaml_config_file
+    conf_dict = load_yaml(config_path)
+  File "/usr/src/homeassistant/homeassistant/util/yaml/loader.py", line 64, in load_yaml
+    raise HomeAssistantError(exc) from exc
+homeassistant.exceptions.HomeAssistantError: while scanning an alias
+  in "/config/configuration.yaml", line 44, column 9
+expected alphabetic or numeric character, but found '.'
+  in "/config/configuration.yaml", line 44, column 10
+2020-11-23 22:55:10 ERROR (MainThread) [custom_components.apple_tv.config_flow] Authentication problem
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pyatv/support/__init__.py", line 29, in error_handler
+    return await func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/pyatv/airplay/auth.py", line 48, in finish_authentication
+    await self._send_plist(
+  File "/usr/local/lib/python3.8/site-packages/pyatv/airplay/auth.py", line 69, in _send_plist
+    raise AuthenticationError("{0} failed with code {1}".format(step, code))
+pyatv.exceptions.AuthenticationError: step2 failed with code 500
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/config/custom_components/apple_tv/config_flow.py", line 300, in async_step_pair_with_pin
+    await self.pairing.finish()
+  File "/usr/local/lib/python3.8/site-packages/pyatv/airplay/pairing.py", line 68, in finish
+    await error_handler(
+  File "/usr/local/lib/python3.8/site-packages/pyatv/support/__init__.py", line 37, in error_handler
+    raise fallback(str(ex)) from ex
+pyatv.exceptions.PairingError: step2 failed with code 500
