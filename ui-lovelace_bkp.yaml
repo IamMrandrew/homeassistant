@@ -1,0 +1,123 @@
+kiosk_mode:
+  user_settings:
+    - users:
+        - guest
+      kiosk: true
+background: >-
+  center / cover no-repeat fixed
+  url('/hacsfiles/themes/ios-themes/5120x2880_pure_minimal_filtered.png')
+title: SMARTHOME
+views:
+  - path: default_view
+    title: Home
+    theme: ios-dark-mode-orange
+    icon: 'mdi:home'
+    panel: false
+    badges:
+      - entity: person.iammrandrew
+        name: 立仔
+      - entity: person.dad
+        name: 爸爸
+      - entity: person.mum
+        name: 媽咪
+      - entity: person.sis
+        name: 家姐
+      - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
+      - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
+    cards:
+      - type: 'custom:mod-card'
+        style:
+          .: |
+            ha-card {
+            }
+          hui-horizontal-stack-card:
+            $: |
+              h1.card-header {
+                color: #FFFFFF;
+                padding-top: 0px;
+                padding-bottom: 0px;     
+                margin-top: 0px;
+                margin-bottom: 5px;
+              }
+        card:
+          type: horizontal-stack
+          title: 燈
+          cards:
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng_2
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng_3
+      - entity: weather.smarthome
+        type: weather-forecast
+      - type: alarm-panel
+        states:
+          - arm_away
+        entity: alarm_control_panel.aqara_hub_a429
+      - type: 'custom:button-card'
+        icon: 'mdi:lightbulb-multiple'
+        tap_action:
+          action: toggle
+        entity: light.zou_lang_deng
+      - type: glance
+        entities:
+          - entity: binary_sensor.motion_sensor_0c67
+          - entity: binary_sensor.motion_sensor_2c8a
+          - entity: binary_sensor.motion_sensor_occupancy
+          - entity: binary_sensor.door_and_window_sensor_22ec
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.mibedsidelamp2_5a9b
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.aqara_hub_a429
+      - entities:
+          - entity: script.tv_on_off
+          - entity: script.tv_volume_up
+          - entity: script.tv_volume_down
+          - entity: script.tv_switch
+          - entity: script.tv_tv
+          - entity: script.tv_appletv
+          - entity: script.fan
+        type: entities
+        title: 電視控制
+      - type: history-graph
+        entities:
+          - entity: sensor.epson_wf_3520_series_black_ink
+            name: 黑色墨水(Black）
+          - entity: sensor.epson_wf_3520_series_magenta_ink
+            name: 紅色墨水(Red）
+          - entity: sensor.epson_wf_3520_series_yellow_ink
+            name: 黃色墨水(Yellow)
+          - entity: sensor.epson_wf_3520_series_cyan_ink
+            name: 藍色墨水(Cyan）
+        refresh_interval: 0
+        title: 印表機
+        hours_to_show: 80
+      - type: glance
+        entities:
+          - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
+          - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
+        state_color: false
+      - type: 'custom:button-card'
+        icon: 'mdi:lightbulb-multiple'
+        tap_action:
+          action: toggle
+        entity: group.living_lights
+  - path: test
+    title: TEST
+    theme: ios-dark-mode-orange
+    icon: 'mdi:home-alert'
+    badges: []
+    cards: []
