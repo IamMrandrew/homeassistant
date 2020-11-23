@@ -31,7 +31,12 @@
     entity_id: light.lightbulb_aab5
     domain: light
     brightness_pct: 25
-  - delay: '65'
+  - wait_for_trigger:
+    - type: no_motion
+      platform: device
+      device_id: 5ccfb965e666cdfbe0de82db564cc60c
+      entity_id: binary_sensor.0x00158d0004480c67_occupancy
+      domain: binary_sensor
   - type: turn_off
     device_id: fb87377bac0d4082aa96893b9e014072
     entity_id: light.lightbulb_6983
@@ -223,7 +228,12 @@
     device_id: a7c64fcfe33519a075ae0d690f91a938
     entity_id: switch.wall_switch_a6b8_2
     domain: switch
-  - delay: '60'
+  - wait_for_trigger:
+    - type: no_motion
+      platform: device
+      device_id: 6a9e1eed8705242647150d0be4855001
+      entity_id: binary_sensor.motion_sensor_occupancy
+      domain: binary_sensor
   - type: turn_off
     device_id: a7c64fcfe33519a075ae0d690f91a938
     entity_id: switch.wall_switch_a6b8
