@@ -46,6 +46,9 @@ homekit:
       - media_player.4a2fd288_903b2f41
       - light.4a2fd288_903b2f41
       - sensor.4a2fd288_903b2f41
+      - light.c3ac8524_f08e5f28
+      - media_player.c3ac8524_f08e5f28
+      - sensor.c3ac8524_f08e5f28
     
 light:
   - platform: group
