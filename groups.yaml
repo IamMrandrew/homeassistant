@@ -1,5 +1,0 @@
-living_lights:
-  name: 客廳燈
-  entities:
-    - switch.wall_switch_a6b8_2
-    - switch.wall_switch_a6b8

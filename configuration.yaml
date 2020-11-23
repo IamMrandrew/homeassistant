@@ -21,6 +21,8 @@ script: !include scripts.yaml
 frontend:
   themes: !include_dir_merge_named themes
   
+browser_mod:
+
 discovery:
 
 homekit:
@@ -52,6 +54,12 @@ light:
   - platform: switch
     name: 客廳燈2
     entity_id: switch.wall_switch_a6b8
+    
+  - platform: group
+    name: 客廳燈
+    entities:
+    - light.ke_ting_deng
+    - light.ke_ting_deng_2
 
 device_tracker:
    - platform: ping
