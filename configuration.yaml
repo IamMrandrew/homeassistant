@@ -20,7 +20,7 @@ script: !include scripts.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
-  
+
 browser_mod:
 
 discovery:
@@ -37,8 +37,15 @@ homekit:
       - binary_sensor.2_nightlight
       - binary_sensor.deng_3_nightlight
       - light.zou_lang_deng
+      - light.ke_ting_deng_3
       - switch.wall_switch_a6b8_2
       - switch.wall_switch_a6b8
+      - media_player.9e42fca1_b02b9198
+      - light.9e42fca1_b02b9198
+      - sensor.9e42fca1_b02b9198
+      - media_player.4a2fd288_903b2f41
+      - light.4a2fd288_903b2f41
+      - sensor.4a2fd288_903b2f41
     
 light:
   - platform: group
