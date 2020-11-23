@@ -4,13 +4,9 @@
   trigger:
   - type: motion
     platform: device
-    device_id: 76166037abf04555ab540f1d7963ce3d
-    entity_id: binary_sensor.motion_sensor_0c67
+    device_id: 5ccfb965e666cdfbe0de82db564cc60c
+    entity_id: binary_sensor.0x00158d0004480c67_occupancy
     domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 0
   condition:
   - condition: or
     conditions:
@@ -18,6 +14,12 @@
       after: sunset
     - condition: sun
       before: sunrise
+  - type: is_illuminance
+    condition: device
+    device_id: 5ccfb965e666cdfbe0de82db564cc60c
+    entity_id: sensor.0x00158d0004480c67_illuminance
+    domain: sensor
+    below: 30
   action:
   - domain: light
     entity_id: light.lightbulb_6983
