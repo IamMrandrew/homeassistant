@@ -1,0 +1,442 @@
+kiosk_mode:
+  user_settings:
+    - users:
+        - guest
+      kiosk: true
+background: >-
+  center / cover no-repeat fixed
+  url('/hacsfiles/themes/ios-themes/5120x2880_pure_minimal_filtered.png')
+title: HOME
+views:
+  - path: homekit
+    title: HomeKit Panel
+    icon: 'mdi:home-outline'
+    panel: true
+    badges: []
+    cards:
+      - type: 'custom:homekit-card'
+        titleColor: '#FFFFFF'
+        useBrightness: false
+        statePositionTop: true
+        enableColumns: true
+        style: |
+          :host {
+            --tile-background: rgba(255, 255, 255, 0.8);
+            --tile-border-radius: 18px;
+            --tile-width: 100px;
+            --tile-height: 100px;
+            --tile-on-background: rgba(255, 255, 255, 1);
+
+            --tile-name-text-color: rgba(0, 0, 0, 0.4);
+            --tile-on-name-text-color: rgba(0, 0, 0, 1);
+
+            --tile-state-text-color: rgba(0, 0, 0, 0.4);
+            --tile-on-state-text-color: rgba(0, 0, 0, 1);
+
+            --tile-state-changed-text-color: rgb(134, 134, 134);
+            --tile-unavailable-state-text-color: rgba(255, 0, 0, 1);
+
+            --tile-value-text-color: rgba(0, 0, 0, 1);
+
+
+            --tile-icon-color: rgba(0, 0, 0, 0.3);
+            --tile-on-icon-color: #F7CD47;
+
+
+            --tile-width-mobile: 90px;
+            --tile-height-mobile: 90px;
+
+            --min-header-height: 150px;
+
+            --tile-icon-size: 30px;
+
+            --tile-image-radius: 100%
+
+            --slider-width: 120px;
+            --slider-height: 120px;
+          }
+
+          .button {
+            box-shadow: none !important;
+            font-weight: 400 !important;
+          }
+
+          .button.event{
+            padding: 13px !important;
+          }
+
+          .button-inner .icon {
+            position: relative;
+            left: -8px;
+          }
+          .circle-state path {
+            stroke-width: 5;
+            stroke: rgba(171, 171, 171, 0.9);
+          }
+
+          #count {
+            font-size: 25px;
+          }
+
+          homekit-button[data-type="'custom'"] .name.on{
+            margin-bottom: 15px;
+          }
+
+          homekit-button[data-type="'custom'"].height-half .name.on{
+            margin-bottom: 0px;
+          }
+
+          @media only screen and (max-width: 768px) {
+            .header, .homekit-card {
+              width: 373px !important;
+            }
+          }
+
+          .row {
+            padding-top: 0px !important
+          }
+
+          @media only screen and (min-width: 769px) {
+            .row .col.fixed {
+              min-width: calc(var(--tile-on-row) * calc(var(--tile-width, 100px) + 34px)) !important;
+              width: calc(var(--tile-on-row) * calc(var(--tile-width, 100px) + 34px)) !important;
+            }       
+          }
+        rows:
+          - row: 1
+            columns:
+              - column: 1
+                tileOnRow: 2
+                entities:
+                  - title: 屋企
+                    entities:
+                      - entity: person.iammrandrew
+                        name: 立仔
+                      - entity: person.sis
+                        name: 家姐
+                      - entity: person.dad
+                        name: 爸爸
+                      - entity: person.mum
+                        name: 媽咪
+              - column: 2
+                tileOnRow: 2
+                entities:
+                  - title: 電視
+                    entities:
+                      - entity: script.tv_volume_up
+                      - entity: script.tv_volume_down
+                      - entity: media_player.ke_ting
+                        wider: true
+              - column: 3
+                tileOnRow: 2
+                entities:
+                  - title: 影印機
+                    entities:
+                      - card: 'custom:mini-graph-card'
+                        noPadding: true
+                        wider: true
+                        higher: true
+                        cardOptions:
+                          entities:
+                            - entity: sensor.epson_wf_3520_series_black_ink
+                              name: 黑色墨水
+                              color: '#4B4B4B'
+                            - entity: sensor.epson_wf_3520_series_magenta_ink
+                              name: 紅色墨水
+                              color: '#f15152'
+                            - entity: sensor.epson_wf_3520_series_yellow_ink
+                              name: 黃色墨水
+                              color: '#ffd23f'
+                            - entity: sensor.epson_wf_3520_series_cyan_ink
+                              name: 藍色墨水
+                              color: '#3a6ea5'
+                          icon: 'mdi:printer'
+                          name: 影印機
+                          tap_action: none
+                        cardStyle: >
+                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          } .flex.type-custom-mini-graph-card { padding: 0px; }
+                          .header { margin-top: 8px; padding: 10px 13px 0px; }
+                          .header .name > span { opacity: 1; font-size: 13px; }
+
+                          .states { margin-top: 5px; padding: 0px 13px; } .state
+                          > span { line-height: 20px; } .states .state
+                          .state__value { font-size: 20px; } .states .state
+                          .state__uom { font-size: 15px; } .states .state
+                          .state__time { font-size: 12px; font-weight: 400;
+                          bottom: -1.3rem; }
+
+                          .graph__labels { top: -20px !important;
+                          flex-direction: row !important; } .icon { color:
+                          #F7CD47 !important;} .graph__legend { padding: 0 5px
+                          35px !important }                             
+          - row: 2
+            columns:
+              - column: 1
+                entities:
+                  - title: 睡房
+                    popup:
+                      type: 'custom:light-popup-card'
+                      borderRadius: 30px;
+                    entities:
+                      - entity: light.deng
+                        icon: 'mdi:wall-sconce-flat'
+                      - entity: light.mibedsidelamp2_5a9b
+                        icon: 'mdi:lamp'
+                      - entity: light.aqara_hub_a429
+                        icon: 'mdi:alarm-light-outline'
+                      - entity: alarm_control_panel.aqara_hub_a429
+                        popupExtend:
+                          actions:
+                            - service: alarm_control_panel.alarm_arm_away
+                              service_data:
+                                entity_id: alarm_control_panel.aqara_hub_a429
+                              color: '#FDCA64'
+                              name: ontspannen
+                            - service: alarm_control_panel.alarm_disarm
+                              service_data:
+                                entity_id: alarm_control_panel.aqara_hub_a429
+                              color: '#FDCA64'
+                              name: dis
+              - column: 2
+                entities:
+                  - title: 房間
+                    popup:
+                      type: 'custom:light-popup-card'
+                      borderRadius: 30px;
+                    entities:
+                      - entity: light.deng_2
+                        icon: 'mdi:wall-sconce-flat'
+                        name: 主人房 燈
+                      - entity: light.deng_3
+                        icon: 'mdi:wall-sconce-flat'
+                        name: 睡房II 燈
+          - row: 3
+            columns:
+              - column: 1
+                entities:
+                  - title: 客廳
+                    popup:
+                      type: 'custom:light-popup-card'
+                      borderRadius: 30px;
+                    entities:
+                      - entity: light.ke_ting_deng_3
+                        icon: 'mdi:coach-lamp'
+                        name: 客廳燈
+                      - entity: binary_sensor.motion_sensor_occupancy
+                        icon: 'mdi:motion-sensor'
+                        name: 動作偵測
+                      - card: 'custom:mini-graph-card'
+                        noPadding: true
+                        cardOptions:
+                          entities:
+                            - sensor.motion_sensor_illuminance
+                          icon: 'mdi:brightness-6'
+                          name: 光照度
+                        cardStyle: >
+                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          }
+
+                          .flex.type-custom-mini-graph-card { padding: 0px; }
+                          .header {
+
+                          margin-top: 8px; padding: 10px 13px 0px; } .header
+                          .name >
+
+                          span { opacity: 1; font-size: 13px; }
+
+
+                          .states { margin-top: 5px; padding: 0px 13px; } .state
+                          > span
+
+                          { line-height: 20px; } .states .state .state__value {
+
+                          font-size: 20px; } .states .state .state__uom {
+                          font-size:
+
+                          15px; } .states .state .state__time { font-size: 12px;
+
+                          font-weight: 400; bottom: -1.3rem; }
+
+
+                          .graph__labels { top: -20px; flex-direction: row; }
+                          .icon {
+
+                          color: #F7CD47 !important;}
+              - column: 2
+                entities:
+                  - title: 走廊
+                    popup:
+                      type: 'custom:light-popup-card'
+                      borderRadius: 30px;
+                    entities:
+                      - entity: light.zou_lang_deng
+                        icon: 'mdi:ceiling-light'
+                      - entity: binary_sensor.0x00158d0004480c67_occupancy
+                        icon: 'mdi:motion-sensor'
+                        name: 動作偵測
+                      - card: 'custom:mini-graph-card'
+                        noPadding: true
+                        cardOptions:
+                          entities:
+                            - sensor.0x00158d0004480c67_illuminance
+                          icon: 'mdi:brightness-6'
+                          name: 光照度
+                        cardStyle: >
+                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          } .flex.type-custom-mini-graph-card { padding: 0px; }
+                          .header { margin-top: 8px; padding: 10px 13px 0px; }
+                          .header .name > span { opacity: 1; font-size: 13px; }
+
+                          .states { margin-top: 5px; padding: 0px 13px; } .state
+                          > span { line-height: 20px; } .states .state
+                          .state__value { font-size: 20px; } .states .state
+                          .state__uom { font-size: 15px; } .states .state
+                          .state__time { font-size: 12px; font-weight: 400;
+                          bottom: -1.3rem; }
+
+                          .graph__labels { top: -20px; flex-direction: row; }
+                          .icon { color: #F7CD47 !important;}
+          - row: 4
+            columns:
+              - column: 1
+                entities:
+                  - title: 其他
+                    entities:
+                      - custom: Navigate Home
+                        name: 轉至Home
+                        icon: 'mdi:home'
+                        halfheight: true
+                        style: |
+                          .name {
+                            padding: 100px;
+                          }
+                        tap_action:
+                          action: navigate
+                          navigation_path: /lovelace/default_view
+  - path: default_view
+    title: Home
+    theme: ios-dark-mode-orange
+    icon: 'mdi:home'
+    panel: false
+    badges:
+      - entity: person.iammrandrew
+        name: 立仔
+      - entity: person.dad
+        name: 爸爸
+      - entity: person.mum
+        name: 媽咪
+      - entity: person.sis
+        name: 家姐
+      - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
+      - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
+    cards:
+      - type: 'custom:mod-card'
+        style:
+          .: |
+            ha-card {
+            }
+          hui-horizontal-stack-card:
+            $: |
+              h1.card-header {
+                color: #FFFFFF;
+                padding-top: 0px;
+                padding-bottom: 0px;     
+                margin-top: 0px;
+                margin-bottom: 5px;
+              }
+        card:
+          type: horizontal-stack
+          title: 燈
+          cards:
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng_2
+            - type: 'custom:button-card'
+              tap_action:
+                action: toggle
+              entity: light.deng_3
+      - entity: weather.smarthome
+        type: weather-forecast
+      - type: alarm-panel
+        states:
+          - arm_away
+        entity: alarm_control_panel.aqara_hub_a429
+      - type: 'custom:button-card'
+        icon: 'mdi:lightbulb-multiple'
+        tap_action:
+          action: toggle
+        entity: light.zou_lang_deng
+      - type: glance
+        entities:
+          - entity: binary_sensor.motion_sensor_0c67
+          - entity: binary_sensor.motion_sensor_2c8a
+          - entity: binary_sensor.motion_sensor_occupancy
+          - entity: binary_sensor.door_and_window_sensor_22ec
+          - entity: binary_sensor.0x00158d0004480c67_occupancy
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.mibedsidelamp2_5a9b
+          - type: 'custom:button-card'
+            tap_action:
+              action: toggle
+            entity: light.aqara_hub_a429
+      - entities:
+          - entity: script.tv_on_off
+          - entity: script.tv_volume_up
+          - entity: script.tv_volume_down
+          - entity: script.tv_switch
+          - entity: script.tv_tv
+          - entity: script.tv_appletv
+          - entity: script.fan
+        type: entities
+        title: 電視控制
+      - type: history-graph
+        entities:
+          - entity: sensor.epson_wf_3520_series_black_ink
+            name: 黑色墨水(Black）
+          - entity: sensor.epson_wf_3520_series_magenta_ink
+            name: 紅色墨水(Red）
+          - entity: sensor.epson_wf_3520_series_yellow_ink
+            name: 黃色墨水(Yellow)
+          - entity: sensor.epson_wf_3520_series_cyan_ink
+            name: 藍色墨水(Cyan）
+        refresh_interval: 0
+        title: 印表機
+        hours_to_show: 80
+      - type: glance
+        entities:
+          - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
+          - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
+        state_color: false
+      - type: 'custom:button-card'
+        icon: 'mdi:lightbulb-multiple'
+        tap_action:
+          action: toggle
+        entity: group.living_lights
+      - type: 'custom:button-card'
+        name: Homekit
+        icon: 'mdi:home-outline'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/homekit
+      - type: button
+        tap_action:
+          action: toggle
+        entity: light.ke_ting_deng_3
+      - type: media-control
+        entity: media_player.ke_ting
+      - type: 'custom:mini-graph-card'
+        graph: line
+        entities:
+          - sensor.0x00158d0004480c67_illuminance
+      - type: 'custom:mini-media-player'
+        entity: media_player.ke_ting
