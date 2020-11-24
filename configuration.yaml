@@ -73,6 +73,8 @@ homekit:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
+      - light.ipad_beoplay
+      
     
 light:
   - platform: group

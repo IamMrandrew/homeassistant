@@ -81,3 +81,5 @@ homeassistant.exceptions.Unauthorized: Unauthorized
 2020-11-25 01:45:31 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
 2020-11-25 01:50:32 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
 2020-11-25 01:50:32 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 01:55:33 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 01:55:33 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
