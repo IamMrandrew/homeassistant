@@ -1,0 +1,16 @@
+- id: '1606240048333'
+  name: 工作模式
+  entities:
+    light.deng:
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Slow Temp
+      - Stop
+      brightness: 255
+      color_temp: 153
+      flowing: false
+      night_light: false
+      friendly_name: 燈
+      supported_features: 47
+      state: 'on'
