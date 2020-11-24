@@ -164,7 +164,7 @@ views:
                           name: 影印機
                           tap_action: none
                         cardStyle: >
-                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
                           } .flex.type-custom-mini-graph-card { padding: 0px; }
                           .header { margin-top: 8px; padding: 10px 13px 0px; }
                           .header .name > span { opacity: 1; font-size: 13px; }
@@ -245,7 +245,7 @@ views:
                           icon: 'mdi:brightness-6'
                           name: 光照度
                         cardStyle: >
-                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
                           }
 
                           .flex.type-custom-mini-graph-card { padding: 0px; }
@@ -294,7 +294,7 @@ views:
                           icon: 'mdi:brightness-6'
                           name: 光照度
                         cardStyle: >
-                          :host { height: 100%; } .flex { display: -webkit-flex;
+                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
                           } .flex.type-custom-mini-graph-card { padding: 0px; }
                           .header { margin-top: 8px; padding: 10px 13px 0px; }
                           .header .name > span { opacity: 1; font-size: 13px; }
