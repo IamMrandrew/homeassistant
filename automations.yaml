@@ -239,7 +239,7 @@
       device_id: 6a9e1eed8705242647150d0be4855001
       entity_id: sensor.motion_sensor_illuminance
       domain: sensor
-      above: 30
+      above: 20
   - type: turn_off
     device_id: a7c64fcfe33519a075ae0d690f91a938
     entity_id: switch.wall_switch_a6b8
