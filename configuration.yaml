@@ -47,6 +47,8 @@ lovelace:
       type: module
     - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js?v=1.11.0
       type: module
+    - url: /hacsfiles/kiosk-mode/kiosk-mode.js
+      type: module
 
 discovery:
 
