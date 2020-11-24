@@ -61,6 +61,16 @@ views:
             font-weight: 400 !important;
           }
 
+          .button.no-padding {
+            width: 126px !important;
+            height: 126px !important;          
+          }
+
+          .button.no-padding.size-2.height-2 {
+            height: calc( (var(--tile-width, 100px) * 2) + (10px * 4) + (10px * 1) - 1px) !important;
+            width: calc((var(--tile-width, 100px) * 2) + (10px * 4) + (10px * 1) - 1px) !important;
+          }
+
           .button.event{
             padding: 13px !important;
           }
@@ -158,6 +168,7 @@ views:
                           } .flex.type-custom-mini-graph-card { padding: 0px; }
                           .header { margin-top: 8px; padding: 10px 13px 0px; }
                           .header .name > span { opacity: 1; font-size: 13px; }
+                          ha-icon { color: #4B4B4B }
 
                           .states { margin-top: 5px; padding: 0px 13px; } .state
                           > span { line-height: 20px; } .states .state
@@ -303,140 +314,5 @@ views:
                 entities:
                   - title: 其他
                     entities:
-                      - custom: Navigate Home
-                        name: 轉至Home
-                        icon: 'mdi:home'
-                        halfheight: true
-                        style: |
-                          .name {
-                            padding: 100px;
-                          }
-                        tap_action:
-                          action: navigate
-                          navigation_path: /lovelace/default_view
-  - path: default_view
-    title: Home
-    theme: ios-dark-mode-orange
-    icon: 'mdi:home'
-    panel: false
-    badges:
-      - entity: person.iammrandrew
-        name: 立仔
-      - entity: person.dad
-        name: 爸爸
-      - entity: person.mum
-        name: 媽咪
-      - entity: person.sis
-        name: 家姐
-      - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
-      - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
-    cards:
-      - type: 'custom:mod-card'
-        style:
-          .: |
-            ha-card {
-            }
-          hui-horizontal-stack-card:
-            $: |
-              h1.card-header {
-                color: #FFFFFF;
-                padding-top: 0px;
-                padding-bottom: 0px;     
-                margin-top: 0px;
-                margin-bottom: 5px;
-              }
-        card:
-          type: horizontal-stack
-          title: 燈
-          cards:
-            - type: 'custom:button-card'
-              tap_action:
-                action: toggle
-              entity: light.deng
-            - type: 'custom:button-card'
-              tap_action:
-                action: toggle
-              entity: light.deng_2
-            - type: 'custom:button-card'
-              tap_action:
-                action: toggle
-              entity: light.deng_3
-      - entity: weather.smarthome
-        type: weather-forecast
-      - type: alarm-panel
-        states:
-          - arm_away
-        entity: alarm_control_panel.aqara_hub_a429
-      - type: 'custom:button-card'
-        icon: 'mdi:lightbulb-multiple'
-        tap_action:
-          action: toggle
-        entity: light.zou_lang_deng
-      - type: glance
-        entities:
-          - entity: binary_sensor.motion_sensor_0c67
-          - entity: binary_sensor.motion_sensor_2c8a
-          - entity: binary_sensor.motion_sensor_occupancy
-          - entity: binary_sensor.door_and_window_sensor_22ec
-          - entity: binary_sensor.0x00158d0004480c67_occupancy
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            tap_action:
-              action: toggle
-            entity: light.mibedsidelamp2_5a9b
-          - type: 'custom:button-card'
-            tap_action:
-              action: toggle
-            entity: light.aqara_hub_a429
-      - entities:
-          - entity: script.tv_on_off
-          - entity: script.tv_volume_up
-          - entity: script.tv_volume_down
-          - entity: script.tv_switch
-          - entity: script.tv_tv
-          - entity: script.tv_appletv
-          - entity: script.fan
-        type: entities
-        title: 電視控制
-      - type: history-graph
-        entities:
-          - entity: sensor.epson_wf_3520_series_black_ink
-            name: 黑色墨水(Black）
-          - entity: sensor.epson_wf_3520_series_magenta_ink
-            name: 紅色墨水(Red）
-          - entity: sensor.epson_wf_3520_series_yellow_ink
-            name: 黃色墨水(Yellow)
-          - entity: sensor.epson_wf_3520_series_cyan_ink
-            name: 藍色墨水(Cyan）
-        refresh_interval: 0
-        title: 印表機
-        hours_to_show: 80
-      - type: glance
-        entities:
-          - entity: sensor.temperature_and_humidity_sensor_8b4b_humidity
-          - entity: sensor.temperature_and_humidity_sensor_8b4b_temperature
-        state_color: false
-      - type: 'custom:button-card'
-        icon: 'mdi:lightbulb-multiple'
-        tap_action:
-          action: toggle
-        entity: group.living_lights
-      - type: 'custom:button-card'
-        name: Homekit
-        icon: 'mdi:home-outline'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/homekit
-      - type: button
-        tap_action:
-          action: toggle
-        entity: light.ke_ting_deng_3
-      - type: media-control
-        entity: media_player.ke_ting
-      - type: 'custom:mini-graph-card'
-        graph: line
-        entities:
-          - sensor.0x00158d0004480c67_illuminance
-      - type: 'custom:mini-media-player'
-        entity: media_player.ke_ting
+                      - entity: media_player.ipad_beoplay
+                        wider: true
