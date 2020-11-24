@@ -22,7 +22,8 @@ frontend:
   themes: !include_dir_merge_named themes
 
 browser_mod:
-
+  prefix: "browser_mod_"
+  
 discovery:
 
 homekit:
