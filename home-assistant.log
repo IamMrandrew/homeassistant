@@ -1,6 +1,18 @@
-2020-11-24 09:57:59 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-24 09:57:59 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-24 09:58:16 WARNING (MainThread) [homeassistant.setup] Setup of browser_mod is taking over 10 seconds.
-2020-11-24 09:58:16 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2020-11-24 09:58:18 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned 
-2020-11-24 09:59:05 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-24 17:39:06 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-24 17:39:06 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-24 17:39:06 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-24 17:39:24 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
+2020-11-24 17:39:25 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-11-24 17:39:25 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-11-24 18:16:56 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp/_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-11-24 18:17:07 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp/_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method

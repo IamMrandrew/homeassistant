@@ -2,9 +2,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-http:
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+# http:
+#   ssl_certificate: /ssl/fullchain.pem
+#   ssl_key: /ssl/privkey.pem
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
@@ -12,7 +12,9 @@ http:
 
 # Text to speech
 tts:
-  - platform: google_translate
+  - platform: voicerss
+    api_key: !secret voicerss_api_key
+    language: 'zh-hk'
 
 group: !include groups.yaml
 automation: !include automations.yaml
