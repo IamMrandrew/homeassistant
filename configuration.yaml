@@ -23,7 +23,7 @@ frontend:
 
 browser_mod:
   prefix: "browser_mod_"
-  
+
 discovery:
 
 homekit:
@@ -41,15 +41,10 @@ homekit:
       - light.ke_ting_deng_3
       - switch.wall_switch_a6b8_2
       - switch.wall_switch_a6b8
-      - media_player.9e42fca1_b02b9198
-      - light.9e42fca1_b02b9198
-      - sensor.9e42fca1_b02b9198
-      - media_player.4a2fd288_903b2f41
-      - light.4a2fd288_903b2f41
-      - sensor.4a2fd288_903b2f41
-      - light.c3ac8524_f08e5f28
-      - media_player.c3ac8524_f08e5f28
-      - sensor.c3ac8524_f08e5f28
+    exclude_entity_globs:
+      - light.browser_mod_*
+      - media_player.browser_mod_*
+      - sensor.browser_mod_*
     
 light:
   - platform: group
