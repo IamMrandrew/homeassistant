@@ -16,3 +16,51 @@ Traceback (most recent call last):
     messages, upgraded, tail = self._request_parser.feed_data(data)
   File "aiohttp/_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
 aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-11-24 21:02:26 ERROR (MainThread) [homeassistant.core] Error executing service: <ServiceCall media_player.media_pause (c:f2ba348572852267757bbd58c5664669): entity_id=['media_player.ke_ting']>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1464, in catch_exceptions
+    await coro_or_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 204, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 482, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 664, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 519, in _handle_entity_call
+    await result
+  File "/config/custom_components/apple_tv/media_player.py", line 284, in async_media_pause
+    await self.atv.remote_control.pause()
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 212, in pause
+    await self._send_command(CommandInfo_pb2.Pause)
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 170, in _send_command
+    raise exceptions.CommandError(
+pyatv.exceptions.CommandError: Pause failed: SendError=ApplicationNotFound, HandlerReturnStatus=Success
+2020-11-24 21:02:30 ERROR (MainThread) [homeassistant.core] Error executing service: <ServiceCall media_player.media_play (c:9c5d42a141e4e54bc35ebdcbc3c62dc4): entity_id=['media_player.ke_ting']>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1464, in catch_exceptions
+    await coro_or_task
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 204, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 482, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 664, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 519, in _handle_entity_call
+    await result
+  File "/config/custom_components/apple_tv/media_player.py", line 274, in async_media_play
+    await self.atv.remote_control.play()
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 195, in play
+    await self._send_command(CommandInfo_pb2.Play)
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 164, in _send_command
+    resp = await self.protocol.send_and_receive(messages.command(command, **kwargs))
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/protocol.py", line 138, in send_and_receive
+    return await self._receive(identifier, timeout)
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/protocol.py", line 146, in _receive
+    await asyncio.wait_for(semaphore.acquire(), timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError

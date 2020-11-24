@@ -43,6 +43,8 @@ homekit:
       - light.ke_ting_deng_3
       - switch.wall_switch_a6b8_2
       - switch.wall_switch_a6b8
+      - remote.ke_ting
+      - media_player.ke_ting
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*
