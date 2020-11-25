@@ -314,5 +314,5 @@ views:
                 entities:
                   - title: 其他
                     entities:
-                      - entity: media_player.ipad_beoplay
+                      - entity: media_player.htc_e8_hub
                         wider: true

@@ -272,7 +272,7 @@
   condition: []
   action:
   - service: tts.voicerss_say
-    entity_id: media_player.ipad_beoplay
+    entity_id: media_player.htc_e8_hub
     data:
       message: '{{trigger.to_state.attributes.friendly_name}}返左屋企'
   mode: single

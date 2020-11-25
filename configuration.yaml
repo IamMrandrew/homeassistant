@@ -27,7 +27,9 @@ browser_mod:
   prefix: "browser_mod_"
   devices:
     9d2461a7-1521d960:
-      name: iPad_Beoplay
+      name: iPad_hub
+    e7ec9167-d1728804:
+      name: htc_e8_hub
 
 lovelace:
   mode: yaml
@@ -49,7 +51,9 @@ lovelace:
       type: module
     - url: /hacsfiles/kiosk-mode/kiosk-mode.js
       type: module
-
+    - url: /hacsfiles/lovelace-card-mod/card-mod.js
+      type: module
+      
 discovery:
 
 homekit:
@@ -73,7 +77,10 @@ homekit:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
-      - light.ipad_beoplay
+      - light.ipad_hub
+      - sensor.ipad_hub
+      - light.htc_e8_hub
+      - sensor.htc_e8_hub
       
     
 light:
