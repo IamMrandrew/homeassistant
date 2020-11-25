@@ -66,3 +66,10 @@
 2020-11-25 18:33:26 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
 2020-11-25 18:38:27 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
 2020-11-25 18:38:27 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:43:28 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:43:28 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:48:29 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:48:29 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:53:30 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:53:30 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:54:49 ERROR (MainThread) [homeassistant.components.hassio] extra keys not allowed @ data['customize']['person_dad']

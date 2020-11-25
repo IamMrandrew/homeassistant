@@ -168,9 +168,9 @@ homeassistant:
       friendly_name: 立仔
     person.sis:
       friendly_name: 家姐
-    person_dad:
+    person.dad:
       friendly_name: 爸爸
-    person_mum:
+    person.mum:
       friendly_name: 媽咪
  
        
