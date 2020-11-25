@@ -1,85 +1,66 @@
-2020-11-24 23:31:47 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-24 23:31:47 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-24 23:31:47 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-24 23:32:10 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
-2020-11-24 23:32:11 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
-2020-11-24 23:32:11 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-11-25 00:30:28 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1759720376] Unauthorized
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
-    await hass.services.async_call(
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
-    task.result()
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
-    await handler.job.target(service_call)
-  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 548, in admin_handler
-    raise Unauthorized(context=call.context)
-homeassistant.exceptions.Unauthorized: Unauthorized
-2020-11-25 00:30:42 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1768061272] Unauthorized
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
-    await hass.services.async_call(
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
-    task.result()
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
-    await handler.job.target(service_call)
-  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 548, in admin_handler
-    raise Unauthorized(context=call.context)
-homeassistant.exceptions.Unauthorized: Unauthorized
-2020-11-25 00:30:47 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1768061272] Unauthorized
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
-    await hass.services.async_call(
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
-    task.result()
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
-    await handler.job.target(service_call)
-  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 548, in admin_handler
-    raise Unauthorized(context=call.context)
-homeassistant.exceptions.Unauthorized: Unauthorized
-2020-11-25 00:31:21 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1768022824] Unauthorized
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
-    await hass.services.async_call(
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
-    task.result()
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
-    await handler.job.target(service_call)
-  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 548, in admin_handler
-    raise Unauthorized(context=call.context)
-homeassistant.exceptions.Unauthorized: Unauthorized
-2020-11-25 00:33:40 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1742700088] Unauthorized
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
-    await hass.services.async_call(
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
-    task.result()
-  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
-    await handler.job.target(service_call)
-  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 548, in admin_handler
-    raise Unauthorized(context=call.context)
-homeassistant.exceptions.Unauthorized: Unauthorized
-2020-11-25 01:19:42 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:19:42 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:20:28 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:20:28 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:24:43 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:24:43 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:25:25 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:25:25 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:29:43 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:29:43 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:30:29 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:30:29 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:35:30 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:35:30 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:40:31 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:40:31 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:42:00 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:42:00 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:45:31 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:45:31 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:50:32 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:50:32 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:55:33 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
-2020-11-25 01:55:33 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:02:17 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-25 02:02:17 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-25 02:02:17 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-25 02:02:32 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.812 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-11-25 02:02:34 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:02:34 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:02:35 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
+2020-11-25 02:02:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-11-25 02:02:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-11-25 02:05:35 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:05:35 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:16:26 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:16:26 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:17:14 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:17:14 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:35:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 02:35:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:28:02 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:28:02 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:28:02 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:28:02 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:30:15 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 13:30:15 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:27:08 ERROR (SyncWorker_17) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
+2020-11-25 14:41:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:41:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:41:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:41:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:41:56 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 14:41:56 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:12 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:12 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:38 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:38 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:38 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:23:38 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:28:14 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:28:14 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:33:15 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:33:15 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:35:37 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:35:37 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:38:16 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:38:16 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:43:17 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:43:17 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:48:17 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:48:17 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:53:18 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:53:18 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:58:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 17:58:20 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:03:21 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:03:21 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:08:22 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:08:22 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:13:23 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:13:23 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:18:24 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:18:24 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:23:24 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:23:24 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:28:25 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:28:25 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:33:26 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
+2020-11-25 18:33:26 WARNING (MainThread) [homeassistant.components.mobile_app.notify] Found duplicate device name andrew 的 iPhone
