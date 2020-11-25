@@ -164,6 +164,14 @@ homeassistant:
     script.fan:
       friendly_name: 風扇
       homebridge_name: 風扇
+    person.iammrandrew:
+      friendly_name: 立仔
+    person.sis:
+      friendly_name: 家姐
+    person_dad:
+      friendly_name: 爸爸
+    person_mum:
+      friendly_name: 媽咪
  
        
     
