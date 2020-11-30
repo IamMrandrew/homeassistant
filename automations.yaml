@@ -12,6 +12,7 @@
     conditions:
     - condition: sun
       after: sunset
+      after_offset: "-00:45:00"
     - condition: sun
       before: sunrise
   - type: is_illuminance

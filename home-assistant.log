@@ -1,8 +1,9 @@
-2020-11-25 20:53:50 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-25 20:53:50 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-25 20:53:50 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-11-25 20:54:03 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.751 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
-2020-11-25 20:54:12 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
-2020-11-25 20:54:13 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
-2020-11-25 20:54:13 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-11-25 21:28:20 ERROR (MainThread) [homeassistant.components.ipp] Error fetching ipp data: Invalid response from API: Timeout occurred while connecting to IPP server.
+2020-11-30 18:54:14 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-30 18:54:14 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-30 18:54:14 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-30 18:54:34 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned 
+2020-11-30 18:54:35 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
+2020-11-30 18:54:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-11-30 18:54:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-11-30 19:00:51 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
+2020-11-30 19:02:17 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')

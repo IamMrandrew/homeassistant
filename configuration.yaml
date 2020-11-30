@@ -28,7 +28,7 @@ browser_mod:
   devices:
     9d2461a7-1521d960:
       name: iPad_hub
-    e7ec9167-d1728804:
+    751db58f-78fe29b5:
       name: htc_e8_hub
 
 lovelace:
@@ -53,7 +53,7 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-card-mod/card-mod.js
       type: module
-      
+
 discovery:
 
 homekit:
@@ -73,14 +73,16 @@ homekit:
       - switch.wall_switch_a6b8
       - remote.ke_ting
       - media_player.ke_ting
+      - light.ipad_hub
+      - sensor.ipad_hub
+      - media_player.ipad_hub
+      - light.htc_e8_hub
+      - sensor.htc_e8_hub
+      - media_player.e8_hub
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
-      - light.ipad_hub
-      - sensor.ipad_hub
-      - light.htc_e8_hub
-      - sensor.htc_e8_hub
       
     
 light:
@@ -122,6 +124,8 @@ device_tracker:
 input_boolean:
   bedside_lamp:
     name: Check if bedside lamp is on
+  kiosk_mode:
+    name: Kiosk control
 
 remote:
   - platform: xiaomi_miio
