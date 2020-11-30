@@ -39,7 +39,7 @@ lovelace:
       type: js
     - url: /hacsfiles/Homekit-panel-card/homekit-panel-card.js
       type: module
-    - url: /local/light-entity-card//light-entity-card.js
+    - url: /hacsfiles/light-entity-card//light-entity-card.js
       type: js
     - url: /hacsfiles/light-popup-card/light-popup-card.js
       type: module
