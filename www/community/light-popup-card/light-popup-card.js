@@ -3834,7 +3834,7 @@ class LightPopupCard extends LitElement {
         var switchHeight = this.config.switchHeight ? this.config.switchHeight : "380px";
         var color = this._getColorForLightEntity(stateObj, this.config.useTemperature, this.config.useBrightness);
         var sliderColor = "sliderColor" in this.config ? this.config.sliderColor : "#FFF";
-        var sliderColoredByLight = "sliderColoredByLight" in this.config ? this.config.sliderColoredByLight : false;
+        var sliderColoredByLight = "sliderColoredByLight" in this.config ? this.config.sliderColoredByLight : true;
         var sliderThumbColor = "sliderThumbColor" in this.config ? this.config.sliderThumbColor : "#ddd";
         var sliderTrackColor = "sliderTrackColor" in this.config ? this.config.sliderTrackColor : "#ddd";
         var switchColor = "switchColor" in this.config ? this.config.switchColor : "#FFF";
@@ -3864,10 +3864,10 @@ class LightPopupCard extends LitElement {
       <div class="${fullscreen === true ? 'popup-wrapper' : ''}">
             <div id="popup" class="popup-inner" @click="${e => this._close(e)}">
                 <div class="icon${fullscreen === true ? ' fullscreen' : ''}">
-                    <ha-icon style="${onStates.includes(stateObj.state) ? 'color:' + color + ';' : ''}" icon="${icon}" />
+                    <ha-icon style="${onStates.includes(stateObj.state) ? 'color:' + '#f7d959' + ';' : ''}" icon="${icon}" />
                 </div>
                 ${((stateObj.attributes.supported_features & supportBrightness) && displayType == 'auto') || (displayType == 'slider') ? html `
-                    <h4 id="brightnessValue">${offStates.includes(stateObj.state) ? this.hass.localize(`component.light.state._.off`) : brightness + '%'}</h4>
+                    <h4 id="brightnessValue" style="font-weight: 400; color: rgba(255, 255, 255, 0.8)">${offStates.includes(stateObj.state) ? this.hass.localize(`component.light.state._.off`) : '亮度 ' + brightness + '%'}</h4>
                     <div class="range-holder" style="--slider-height: ${brightnessHeight};--slider-width: ${brightnessWidth};">
                         <input type="range" style="--slider-width: ${brightnessWidth};--slider-height: ${brightnessHeight}; --slider-border-radius: ${borderRadius};${sliderColoredByLight ? '--slider-color:' + color + ';' : '--slider-color:' + sliderColor + ';'}--slider-thumb-color:${sliderThumbColor};--slider-track-color:${sliderTrackColor};" .value="${offStates.includes(stateObj.state) ? 0 : Math.round(stateObj.attributes.brightness / 2.55)}" @input=${e => this._previewBrightness(e.target.value)} @change=${e => this._setBrightness(stateObj, e.target.value)}>
                     </div>
@@ -3975,7 +3975,7 @@ class LightPopupCard extends LitElement {
     _previewBrightness(value) {
         const el = this.shadowRoot.getElementById("brightnessValue");
         if (el) {
-            el.innerText = (value == 0) ? "Off" : value + "%";
+            el.innerText = (value == 0) ? this.hass.localize(`component.light.state._.off`) : "亮度 " + value + "%";
         }
     }
     _setBrightness(state, value) {
@@ -4002,21 +4002,14 @@ class LightPopupCard extends LitElement {
         if (stateObj) {
             if (stateObj.attributes.rgb_color) {
                 color = `rgb(${stateObj.attributes.rgb_color.join(',')})`;
-                if (stateObj.attributes.brightness) {
-                    color = this._applyBrightnessToColor(color, (stateObj.attributes.brightness + 245) / 5);
-                }
             }
             else if (useTemperature && stateObj.attributes.color_temp && stateObj.attributes.min_mireds && stateObj.attributes.max_mireds) {
                 color = this._getLightColorBasedOnTemperature(stateObj.attributes.color_temp, stateObj.attributes.min_mireds, stateObj.attributes.max_mireds);
-                if (stateObj.attributes.brightness) {
-                    color = this._applyBrightnessToColor(color, (stateObj.attributes.brightness + 245) / 5);
-                }
+
             }
-            else if (useBrightness && stateObj.attributes.brightness) {
-                color = this._applyBrightnessToColor(this._getDefaultColorForState(), (stateObj.attributes.brightness + 245) / 5);
-            }
+
             else {
-                color = this._getDefaultColorForState();
+                color = '#FFFFFF';
             }
         }
         return color;

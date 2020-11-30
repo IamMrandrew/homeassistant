@@ -6471,6 +6471,7 @@ class HomeKitCard extends LitElement {
         this.tileHoldAnimation = false;
         this.useTemperature = false;
         this.useBrightness = false;
+        this.useRGBColor = false;
         this.CUSTOM_TYPE_PREFIX = "custom:";
         this.masonry = false;
     }
@@ -6490,6 +6491,7 @@ class HomeKitCard extends LitElement {
         this.config = config;
         this.useTemperature = "useTemperature" in this.config ? this.config.useTemperature : false;
         this.useBrightness = "useBrightness" in this.config ? this.config.useBrightness : true;
+        this.useRGBColor = "useRGBColor" in this.config ? this.config.useRGBColor : false;
         this.rowTitleColor = this.config.titleColor ? this.config.titleColor : false;
         this.horizontalScroll = "horizontalScroll" in this.config ? this.config.fullscreen : false;
         this.enableColumns = "enableColumns" in this.config ? this.config.enableColumns : false;
@@ -6792,7 +6794,7 @@ class HomeKitCard extends LitElement {
                         color = ent.color;
                     }
                     else {
-                        color = this._getColorForLightEntity(stateObj, this.useTemperature, this.useBrightness);
+                        color = this._getColorForLightEntity(stateObj, this.useTemperature, this.useBrightness, this.useRGBColor);
                     }
                     var type = ent.entity.split('.')[0];
                     if (type == "light") {
@@ -7216,11 +7218,15 @@ class HomeKitCard extends LitElement {
         </homekit-button>
     `;
     }
-    _getColorForLightEntity(stateObj, useTemperature, useBrightness) {
+    _getColorForLightEntity(stateObj, useTemperature, useBrightness, useRGBColor) {
         var color = this.config.default_color ? this.config.default_color : undefined;
         if (stateObj) {
             if (stateObj.attributes.rgb_color) {
-                color = `rgb(${stateObj.attributes.rgb_color.join(',')})`;
+                if (useRGBColor) {
+                    color = `rgb(${stateObj.attributes.rgb_color.join(',')})`;
+                } else {
+                    color = this._getDefaultColorForState();
+                }            
                 if (useBrightness && stateObj.attributes.brightness) {
                     color = this._applyBrightnessToColor(color, (stateObj.attributes.brightness + 245) / 5);
                 }
