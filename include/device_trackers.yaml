@@ -1,0 +1,13 @@
+- platform: ping
+  hosts: 
+    andrew: !secret andrew_ip
+    sis: !secret sis_ip
+    mum: !secret mum_ip
+    dad: !secret dad_ip
+  interval_seconds: 30
+  consider_home: 180
+  
+- platform: bluetooth_tracker
+  interval_seconds: 30
+  consider_home: 180
+# track_new_devices: yes

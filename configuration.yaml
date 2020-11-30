@@ -16,9 +16,16 @@ tts:
     api_key: !secret voicerss_api_key
     language: 'zh-hk'
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+group: !include include/groups.yaml
+automation: !include include/automations.yaml
+script: !include include/scripts.yaml
+scene: !include include/scenes.yaml
+device_tracker: !include include/device_trackers.yaml
+light: !include include/lights.yaml
+remote: !include include/remotes.yaml
+switch: !include include/switches.yaml
+homeassistant:
+  customize: !include include/customize.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
@@ -78,111 +85,13 @@ homekit:
       - media_player.ipad_hub
       - light.htc_e8_hub
       - sensor.htc_e8_hub
-      - media_player.e8_hub
+      - media_player.htc_e8_hub
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
       
-    
-light:
-  - platform: group
-    name: 走廊燈
-    entities:
-    - light.lightbulb_6983
-    - light.lightbulb_aab5
-    
-  - platform: switch
-    name: 客廳燈1
-    entity_id: switch.wall_switch_a6b8_2
-    
-  - platform: switch
-    name: 客廳燈2
-    entity_id: switch.wall_switch_a6b8
-    
-  - platform: group
-    name: 客廳燈
-    entities:
-    - light.ke_ting_deng
-    - light.ke_ting_deng_2
-
-device_tracker:
-   - platform: ping
-     hosts: 
-       andrew: !secret andrew_ip
-       sis: !secret sis_ip
-       mum: !secret mum_ip
-       dad: !secret dad_ip
-     interval_seconds: 30
-     consider_home: 180
-     
-   - platform: bluetooth_tracker
-     interval_seconds: 30
-     consider_home: 180
-    # track_new_devices: yes
-
 input_boolean:
   bedside_lamp:
     name: Check if bedside lamp is on
-  kiosk_mode:
-    name: Kiosk control
 
-remote:
-  - platform: xiaomi_miio
-    host: 192.168.1.9
-    name: "遙控器"
-    token: !secret miio_token
-    timeout: 30
-    hidden: false
-    commands:
-      activate_tv_on_off:
-        command:
-          - raw:mc0mUwlkxm84mEsmc5mEsmgA7TGZzUBDQB/AH8AfwB/AH8GDwB/AH8AfwB/BQ8AfwB/AH8EjwEGmkxAQOZgEeAR8smgGZAD2Ax4GXgEILwQFfgM7MIAA
-      activate_tv_switch:
-        command:
-          - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+Ch4A/gD+AP4JHgIPNAEDmAFPgD+CD4RXAIeAP4FHzCWTCAA=
-      activate_tv_volume_up:
-        command:
-          - raw:mc0mswlkxm4AhTSZABkAO0xmYBhgIUAOkxAH8B/wB/Af8AeQYPAo8A/wB/AH8FBgGPAH8FjwF/AH8AfwcPBI8AfwB/BA8EDAEImEAA==
-      activate_tv_volume_down:
-        command:
-          - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+CgUzAY8AfwB/AH8EjwIPAo8Cjw2/AY8AfwKPAQqYQAA=
-      activate_fan:
-        command:
-          - raw:mcxm0wlkxm0zmEsmU4AIKZTcAggETmU0ARWaTUAfwKXAg8BiAQjAMICHwEPAY8CHwGfAZ8BB5lMJZM5iCp4A/gg+APYIBh/lMZjOQSWDAYCjwB/AHgDwggbmMyAMIBA5jMgm/APYIvwB0AoQCAgrPAQYDo5gD54QnheeAP4NND4tNAAyGtUDiYAA
-
- 
-homeassistant:
-  customize:
-    script.tv_on_off:
-      friendly_name: 電視
-      homebridge_name: 電視
-    script.tv_switch:
-      friendly_name: 電視轉台
-      homebridge_name: 電視轉台
-    script.tv_volume_up:
-      friendly_name: 音量大
-      homebridge_name: 音量大
-    script.tv_volume_down:
-      friendly_name: 音量小
-      homebridge_name: 音量小
-    script.tv_tv:
-      friendly_name: 轉睇電視
-      homebridge_name: 轉睇電視
-    script.tv_appletv:
-      friendly_name: 轉睇apple TV
-      homebridge_name: 轉睇apple TV
-    script.fan:
-      friendly_name: 風扇
-      homebridge_name: 風扇
-    person.iammrandrew:
-      friendly_name: 立仔
-    person.sis:
-      friendly_name: 家姐
-    person.dad:
-      friendly_name: 爸爸
-    person.mum:
-      friendly_name: 媽咪
- 
-       
-    

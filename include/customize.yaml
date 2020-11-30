@@ -1,0 +1,30 @@
+script.tv_on_off:
+  friendly_name: 電視
+  homebridge_name: 電視
+script.tv_switch:
+  friendly_name: 電視轉台
+  homebridge_name: 電視轉台
+script.tv_volume_up:
+  friendly_name: 音量大
+  homebridge_name: 音量大
+script.tv_volume_down:
+  friendly_name: 音量小
+  homebridge_name: 音量小
+script.tv_tv:
+  friendly_name: 轉睇電視
+  homebridge_name: 轉睇電視
+script.tv_appletv:
+  friendly_name: 轉睇apple TV
+  homebridge_name: 轉睇apple TV
+script.fan:
+  friendly_name: 風扇
+  homebridge_name: 風扇
+person.iammrandrew:
+  friendly_name: 立仔
+person.sis:
+  friendly_name: 家姐
+person.dad:
+  friendly_name: 爸爸
+person.mum:
+  friendly_name: 媽咪
+

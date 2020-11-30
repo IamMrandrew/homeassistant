@@ -1,0 +1,19 @@
+- platform: group
+  name: 走廊燈
+  entities:
+  - light.lightbulb_6983
+  - light.lightbulb_aab5
+  
+- platform: switch
+  name: 客廳燈1
+  entity_id: switch.wall_switch_a6b8_2
+  
+- platform: switch
+  name: 客廳燈2
+  entity_id: switch.wall_switch_a6b8
+  
+- platform: group
+  name: 客廳燈
+  entities:
+  - light.ke_ting_deng
+  - light.ke_ting_deng_2
