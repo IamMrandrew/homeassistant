@@ -333,15 +333,7 @@ views:
                     entities:
                       - entity: media_player.htc_e8_hub
                         wider: true
-                      - entity: input_boolean.kiosk_mode
-                      - custom: clear
-                        name: clear
-                        tap_action:
-                          action: navigate
-                          navigation_path: /lovelace/homekit?kiosk
-                      - custom: clear2
-                        name: clear2
-                        tap_action:
-                          action: navigate
-                          navigation_path: /lovelace/homekit?clear_km_cache
+                      - entity: switch.kiosk_mode
+                        icon: 'mdi:tablet'
+                        name: 切換 Kiosk 模式
 

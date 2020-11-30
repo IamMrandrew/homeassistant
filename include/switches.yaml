@@ -1,0 +1,13 @@
+- platform: template
+  switches:
+    kiosk_mode:
+      turn_on:
+        - service: browser_mod.navigate
+          data:
+            navigation_path: /lovelace/homekit?kiosk
+        - service: browser_mod.window_reload  
+      turn_off:
+        - service: browser_mod.navigate
+          data:
+            navigation_path: /lovelace/homekit?clear_km_cache
+        - service: browser_mod.window_reload
