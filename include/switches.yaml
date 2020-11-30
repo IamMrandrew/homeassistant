@@ -9,5 +9,5 @@
       turn_off:
         - service: browser_mod.navigate
           data:
-            navigation_path: /lovelace/homekit?clear_km_cache
+            navigation_path: /lovelace/homekit?disable_km
         - service: browser_mod.window_reload

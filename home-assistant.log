@@ -1,44 +1,48 @@
-2020-12-01 01:10:37 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-01 01:10:37 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-01 01:10:37 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-01 01:10:50 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.866 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
-2020-12-01 01:10:56 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
-2020-12-01 01:10:57 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
-2020-12-01 01:10:57 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-12-01 01:11:31 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:11:35 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:11:43 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
-2020-12-01 01:16:01 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:16:06 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:17:22 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:17:24 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:17:27 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:22:48 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:20 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "light-entity-card-editor" has already been used with this registry
-2020-12-01 01:22:50 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:22:51 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:22:53 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:22:53 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:16:2 Uncaught TypeError: Cannot read property 'shadowRoot' of null
-2020-12-01 01:22:54 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:22:55 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:25:03 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:25:54 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:15 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:46 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:51 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-01 01:26:51 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:51 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:20 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "light-entity-card-editor" has already been used with this registry
-2020-12-01 01:26:51 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:53 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:26:57 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:26:58 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:58 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:26:58 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:27:02 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:27:02 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:27:02 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:27:03 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?kiosk:0:0 Uncaught 
-2020-12-01 01:27:05 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:27:05 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:27:06 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
-2020-12-01 01:27:07 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?clear_km_cache:0:0 Uncaught 
-2020-12-01 01:27:12 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:28:05 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-01 01:28:05 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-01 01:28:06 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-01 01:28:30 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVMusic
+2020-12-01 01:28:31 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-12-01 01:28:31 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-12-01 01:29:57 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:29:58 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:29:59 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:30:01 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:30:01 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:30:03 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:30:06 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:30:28 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:30:53 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:30:53 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:30:56 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:30:56 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:30:59 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:15 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:31:32 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit:0:0 Uncaught 
+2020-12-01 01:31:38 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:31:38 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:31:39 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:31:40 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:40 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:40 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:41 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:31:42 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:43 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:31:44 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:32:02 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit:0:0 Uncaught 
+2020-12-01 01:32:07 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:32:20 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit:0:0 Uncaught 
+2020-12-01 01:32:33 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:32:50 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit:0:0 Uncaught 
+2020-12-01 01:33:23 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:33:31 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:33:59 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:20 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "light-entity-card-editor" has already been used with this registry
+2020-12-01 01:33:59 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:33:59 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:20 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "light-entity-card-editor" has already been used with this registry
+2020-12-01 01:34:00 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?kiosk:0:0 Uncaught 
+2020-12-01 01:34:03 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:34:03 ERROR (MainThread) [frontend.js.latest.202011112] http://hassio.local:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:34:04 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card//light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
+2020-12-01 01:34:05 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit?disable_km:0:0 Uncaught 
+2020-12-01 01:34:35 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/lovelace/homekit:0:0 Uncaught 
+2020-12-01 01:34:38 ERROR (MainThread) [frontend.js.latest.202011112] http://192.168.1.17:8123/hacsfiles/light-entity-card/light-entity-card.js:8973:26 NotSupportedError: Cannot define multiple custom elements with the same tag name
