@@ -3,6 +3,7 @@ kiosk_mode:
     - users:
         - guest
       kiosk: true
+    
 background: >-
   center / cover no-repeat fixed
   url('/hacsfiles/themes/ios-themes/5120x2880_pure_minimal_filtered.png')
@@ -17,6 +18,7 @@ views:
       - type: 'custom:homekit-card'
         titleColor: '#FFFFFF'
         useBrightness: false
+        useRGBColor: false
         statePositionTop: true
         enableColumns: true
         style: |
@@ -186,16 +188,31 @@ views:
               - column: 1
                 entities:
                   - title: 睡房
-                    popup:
-                      type: 'custom:light-popup-card'
-                      borderRadius: 30px;
                     entities:
                       - entity: light.deng
                         icon: 'mdi:wall-sconce-flat'
+                        popup:
+                          type: 'custom:light-popup-card'
+                          icon: 'mdi:wall-sconce-flat'
+                          borderRadius: 30px;
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
                       - entity: light.mibedsidelamp2_5a9b
                         icon: 'mdi:lamp'
+                        popup:
+                          type: 'custom:light-popup-card'
+                          icon: 'mdi:lamp'
+                          borderRadius: 30px;
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
                       - entity: light.aqara_hub_a429
                         icon: 'mdi:alarm-light-outline'
+                        popup:
+                          type: 'custom:light-popup-card'
+                          icon: 'mdi:alarm-light-outline'
+                          borderRadius: 30px;
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
                       - entity: alarm_control_panel.aqara_hub_a429
                         popupExtend:
                           actions:
@@ -316,3 +333,15 @@ views:
                     entities:
                       - entity: media_player.htc_e8_hub
                         wider: true
+                      - entity: input_boolean.kiosk_mode
+                      - custom: clear
+                        name: clear
+                        tap_action:
+                          action: navigate
+                          navigation_path: /lovelace/homekit?kiosk
+                      - custom: clear2
+                        name: clear2
+                        tap_action:
+                          action: navigate
+                          navigation_path: /lovelace/homekit?clear_km_cache
+
