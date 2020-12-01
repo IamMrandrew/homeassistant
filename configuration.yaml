@@ -46,8 +46,6 @@ lovelace:
       type: js
     - url: /hacsfiles/Homekit-panel-card/homekit-panel-card.js
       type: module
-    - url: /hacsfiles/light-entity-card//light-entity-card.js
-      type: js
     - url: /hacsfiles/light-popup-card/light-popup-card.js
       type: module
     - url: /hacsfiles/light-entity-card/light-entity-card.js
@@ -86,6 +84,7 @@ homekit:
       - light.htc_e8_hub
       - sensor.htc_e8_hub
       - media_player.htc_e8_hub
+      - switch.kiosk_mode
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*

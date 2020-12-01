@@ -205,7 +205,7 @@
   - type: motion
     platform: device
     device_id: 6a9e1eed8705242647150d0be4855001
-    entity_id: binary_sensor.motion_sensor_occupancy
+    entity_id: binary_sensor.iii_occupancy
     domain: binary_sensor
   condition:
   - condition: or
@@ -217,7 +217,7 @@
   - type: is_illuminance
     condition: device
     device_id: 6a9e1eed8705242647150d0be4855001
-    entity_id: sensor.motion_sensor_illuminance
+    entity_id: sensor.iii_illuminance
     domain: sensor
     below: 15
   action:
@@ -233,12 +233,12 @@
     - type: no_motion
       platform: device
       device_id: 6a9e1eed8705242647150d0be4855001
-      entity_id: binary_sensor.motion_sensor_occupancy
+      entity_id: binary_sensor.iii_occupancy
       domain: binary_sensor
     - type: illuminance
       platform: device
       device_id: 6a9e1eed8705242647150d0be4855001
-      entity_id: sensor.motion_sensor_illuminance
+      entity_id: sensor.iii_illuminance
       domain: sensor
       above: 20
   - type: turn_off
