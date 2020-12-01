@@ -1,0 +1,28 @@
+light-entity-card:
+  .: |
+    .content {
+      width: 90vw !important;
+      height: calc(100vh - 64px);
+      display: flex;
+      justify-content: center;
+      align-items: center                                        
+    }
+
+    @media screen and (max-width: 871px) {
+      .content {
+        width: 100vw !important;
+      }
+    }
+  $: |
+    .light-entity-card {
+      max-width: 300px; 
+      min-width: 260px;    
+      background-color: #FFFFFF;
+      padding: 40px;
+      margin: 20px;
+      border-radius: 30px;      
+    }
+
+    .light-entity-card__header {
+      margin-bottom: 25px;
+    }  
