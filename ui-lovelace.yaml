@@ -231,7 +231,10 @@ views:
                   - title: 房間
                     popup:
                       type: 'custom:light-popup-card'
+                      icon: 'mdi:wall-sconce-flat'
                       borderRadius: 30px;
+                      sliderThumbColor: '#F2F2F2'
+                      sliderTrackColor: '#F2F2F2'
                     entities:
                       - entity: light.deng_2
                         icon: 'mdi:wall-sconce-flat'
@@ -244,13 +247,16 @@ views:
               - column: 1
                 entities:
                   - title: 客廳
-                    popup:
-                      type: 'custom:light-popup-card'
-                      borderRadius: 30px;
                     entities:
                       - entity: light.ke_ting_deng_3
                         icon: 'mdi:coach-lamp'
                         name: 客廳燈
+                        popup:
+                          type: 'custom:light-popup-card'
+                          borderRadius: 30px;
+                          icon: 'mdi:coach-lamp'
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
                       - entity: binary_sensor.motion_sensor_occupancy
                         icon: 'mdi:motion-sensor'
                         name: 動作偵測
@@ -294,12 +300,15 @@ views:
               - column: 2
                 entities:
                   - title: 走廊
-                    popup:
-                      type: 'custom:light-popup-card'
-                      borderRadius: 30px;
                     entities:
                       - entity: light.zou_lang_deng
                         icon: 'mdi:ceiling-light'
+                        popup:
+                          type: 'custom:light-popup-card'
+                          borderRadius: 30px;
+                          icon: 'mdi:ceiling-light'
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
                       - entity: binary_sensor.0x00158d0004480c67_occupancy
                         icon: 'mdi:motion-sensor'
                         name: 動作偵測
