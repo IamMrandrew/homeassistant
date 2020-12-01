@@ -165,24 +165,8 @@ views:
                           icon: 'mdi:printer'
                           name: 影印機
                           tap_action: none
-                        cardStyle: >
-                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
-                          } .flex.type-custom-mini-graph-card { padding: 0px; }
-                          .header { margin-top: 8px; padding: 10px 13px 0px; }
-                          .header .name > span { opacity: 1; font-size: 13px; }
-                          ha-icon { color: #4B4B4B }
-
-                          .states { margin-top: 5px; padding: 0px 13px; } .state
-                          > span { line-height: 20px; } .states .state
-                          .state__value { font-size: 20px; } .states .state
-                          .state__uom { font-size: 15px; } .states .state
-                          .state__time { font-size: 12px; font-weight: 400;
-                          bottom: -1.3rem; }
-
-                          .graph__labels { top: -20px !important;
-                          flex-direction: row !important; } .icon { color:
-                          #F7CD47 !important;} .graph__legend { padding: 0 5px
-                          35px !important }                             
+                        cardStyle: !include template/mini-graph-card_cardStyle.yaml
+                    
           - row: 2
             columns:
               - column: 1
@@ -205,16 +189,6 @@ views:
                           borderRadius: 30px;
                           sliderThumbColor: '#F2F2F2'
                           sliderTrackColor: '#F2F2F2'
-                      - entity: light.aqara_hub_a429
-                        icon: 'mdi:alarm-light-outline'
-                        popup:
-                          type: 'custom:light-popup-card'
-                          icon: 'mdi:alarm-light-outline'
-                          borderRadius: 30px;
-                          sliderThumbColor: '#F2F2F2'
-                          sliderTrackColor: '#F2F2F2'
-                      - entity: alarm_control_panel.aqara_hub_a429
-                        popupExtend:
                           actions:
                             - service: alarm_control_panel.alarm_arm_away
                               service_data:
@@ -226,6 +200,16 @@ views:
                                 entity_id: alarm_control_panel.aqara_hub_a429
                               color: '#FDCA64'
                               name: dis
+                      - entity: alarm_control_panel.aqara_hub_a429
+                      - entity: light.aqara_hub_a429
+                        icon: 'mdi:alarm-light-outline'
+                        popup:
+                          type: 'custom:light-popup-card'
+                          icon: 'mdi:alarm-light-outline'
+                          borderRadius: 30px;
+                          sliderThumbColor: '#F2F2F2'
+                          sliderTrackColor: '#F2F2F2'
+
               - column: 2
                 entities:
                   - title: 房間
@@ -257,46 +241,17 @@ views:
                           icon: 'mdi:coach-lamp'
                           sliderThumbColor: '#F2F2F2'
                           sliderTrackColor: '#F2F2F2'
-                      - entity: binary_sensor.motion_sensor_occupancy
+                      - entity: binary_sensor.iii_occupancy
                         icon: 'mdi:motion-sensor'
                         name: 動作偵測
                       - card: 'custom:mini-graph-card'
                         noPadding: true
                         cardOptions:
                           entities:
-                            - sensor.motion_sensor_illuminance
+                            - sensor.iii_illuminance
                           icon: 'mdi:brightness-6'
                           name: 光照度
-                        cardStyle: >
-                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
-                          }
-
-                          .flex.type-custom-mini-graph-card { padding: 0px; }
-                          .header {
-
-                          margin-top: 8px; padding: 10px 13px 0px; } .header
-                          .name >
-
-                          span { opacity: 1; font-size: 13px; }
-
-
-                          .states { margin-top: 5px; padding: 0px 13px; } .state
-                          > span
-
-                          { line-height: 20px; } .states .state .state__value {
-
-                          font-size: 20px; } .states .state .state__uom {
-                          font-size:
-
-                          15px; } .states .state .state__time { font-size: 12px;
-
-                          font-weight: 400; bottom: -1.3rem; }
-
-
-                          .graph__labels { top: -20px; flex-direction: row; }
-                          .icon {
-
-                          color: #F7CD47 !important;}
+                        cardStyle: !include template/mini-graph-card_cardStyle.yaml
               - column: 2
                 entities:
                   - title: 走廊
@@ -319,21 +274,7 @@ views:
                             - sensor.0x00158d0004480c67_illuminance
                           icon: 'mdi:brightness-6'
                           name: 光照度
-                        cardStyle: >
-                          :host { height: 100%; padding: 0px} .flex { display: -webkit-flex;
-                          } .flex.type-custom-mini-graph-card { padding: 0px; }
-                          .header { margin-top: 8px; padding: 10px 13px 0px; }
-                          .header .name > span { opacity: 1; font-size: 13px; }
-
-                          .states { margin-top: 5px; padding: 0px 13px; } .state
-                          > span { line-height: 20px; } .states .state
-                          .state__value { font-size: 20px; } .states .state
-                          .state__uom { font-size: 15px; } .states .state
-                          .state__time { font-size: 12px; font-weight: 400;
-                          bottom: -1.3rem; }
-
-                          .graph__labels { top: -20px; flex-direction: row; }
-                          .icon { color: #F7CD47 !important;}
+                        cardStyle: !include template/mini-graph-card_cardStyle.yaml
           - row: 4
             columns:
               - column: 1
