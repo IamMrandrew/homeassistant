@@ -190,7 +190,7 @@ views:
                             - service: light.turn_on
                               service_data:
                                 entity_id: light.deng
-                                color_temp: 200 #5000K (10000000 / 5000)
+                                color_temp: 200
                               color: 'rgb(255,230,207)'
                             - service: browser_mod.popup
                               service_data:
@@ -237,7 +237,6 @@ views:
                                   brightness: false
                                   color_temp: true
                                   full_width_sliders: true
-                                  # hide_header: true
                                   show_slider_percent: true
                                   smooth_color_wheel: true
                                   consolidate_entities: true
@@ -260,14 +259,68 @@ views:
                       icon: 'mdi:wall-sconce-flat'
                       borderRadius: 30px;
                       sliderThumbColor: '#F2F2F2'
-                      sliderTrackColor: '#F2F2F2'
+                      sliderTrackColor: '#F2F2F2'                      
                     entities:
                       - entity: light.deng_2
                         icon: 'mdi:wall-sconce-flat'
                         name: 主人房 燈
+                        popupExtend:
+                          actions:
+                          - service: light.turn_on
+                            service_data:
+                              entity_id: light.deng_2
+                              color_temp: 153 #6500K (10000000 / 5000)
+                            color: 'rgb(255,248,254)'
+                          - service: light.turn_on
+                            service_data:
+                              entity_id: light.deng_2
+                              color_temp: 200 
+                            color: 'rgb(255,230,207)'
+                          - service: browser_mod.popup
+                            service_data:
+                              title: ' '
+                              deviceID: this
+                              style: !include template/light-entity-card_style.yaml
+                              card:
+                                type: custom:light-entity-card
+                                entity: light.deng_2
+                                brightness: false
+                                color_temp: true
+                                full_width_sliders: true
+                                show_slider_percent: true
+                                smooth_color_wheel: true
+                                consolidate_entities: true
+                                effects_list: false
                       - entity: light.deng_3
                         icon: 'mdi:wall-sconce-flat'
                         name: 睡房II 燈
+                        popupExtend:
+                          actions:
+                          - service: light.turn_on
+                            service_data:
+                              entity_id: light.deng_3
+                              color_temp: 153 #6500K (10000000 / 6500)
+                            color: 'rgb(255,248,254)'
+                          - service: light.turn_on
+                            service_data:
+                              entity_id: light.deng_3
+                              color_temp: 200 
+                            color: 'rgb(255,230,207)'
+                          - service: browser_mod.popup
+                            service_data:
+                              title: ' '
+                              deviceID: this
+                              style: !include template/light-entity-card_style.yaml
+                              card:
+                                type: custom:light-entity-card
+                                entity: light.deng_3
+                                brightness: false
+                                color_temp: true
+                                full_width_sliders: true
+                                show_slider_percent: true
+                                smooth_color_wheel: true
+                                consolidate_entities: true
+                                effects_list: false
           - row: 3
             columns:
               - column: 1
