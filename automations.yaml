@@ -12,7 +12,7 @@
     conditions:
     - condition: sun
       after: sunset
-      after_offset: "-00:45:00"
+      after_offset: -00:45:00
     - condition: sun
       before: sunrise
   - type: is_illuminance
@@ -222,12 +222,12 @@
     below: 15
   action:
   - type: turn_on
-    device_id: a7c64fcfe33519a075ae0d690f91a938
-    entity_id: switch.wall_switch_a6b8
+    device_id: b5b9b0f0f662215cba9a28b0f5aa3135
+    entity_id: switch.living_room_lights_switch_left
     domain: switch
   - type: turn_on
-    device_id: a7c64fcfe33519a075ae0d690f91a938
-    entity_id: switch.wall_switch_a6b8_2
+    device_id: b5b9b0f0f662215cba9a28b0f5aa3135
+    entity_id: switch.living_room_lights_switch_right
     domain: switch
   - wait_for_trigger:
     - type: no_motion
@@ -242,12 +242,12 @@
       domain: sensor
       above: 20
   - type: turn_off
-    device_id: a7c64fcfe33519a075ae0d690f91a938
-    entity_id: switch.wall_switch_a6b8
+    device_id: b5b9b0f0f662215cba9a28b0f5aa3135
+    entity_id: switch.living_room_lights_switch_left
     domain: switch
   - type: turn_off
-    device_id: a7c64fcfe33519a075ae0d690f91a938
-    entity_id: switch.wall_switch_a6b8_2
+    device_id: b5b9b0f0f662215cba9a28b0f5aa3135
+    entity_id: switch.living_room_lights_switch_right
     domain: switch
   mode: single
 - id: '1606300425768'

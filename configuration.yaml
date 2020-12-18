@@ -17,7 +17,7 @@ tts:
     language: 'zh-hk'
 
 group: !include include/groups.yaml
-automation: !include include/automations.yaml
+automation: !include automations.yaml
 script: !include include/scripts.yaml
 scene: !include include/scenes.yaml
 device_tracker: !include include/device_trackers.yaml
@@ -35,8 +35,8 @@ browser_mod:
   devices:
     9d2461a7-1521d960:
       name: iPad_hub
-    751db58f-78fe29b5:
-      name: htc_e8_hub
+    2f0a8b79-e781b605:
+      name: FireHD8_Hub
 
 lovelace:
   mode: yaml
@@ -73,9 +73,9 @@ homekit:
       - binary_sensor.2_nightlight
       - binary_sensor.deng_3_nightlight
       - light.zou_lang_deng
-      - light.ke_ting_deng_3
-      - switch.wall_switch_a6b8_2
-      - switch.wall_switch_a6b8
+      - light.ke_ting_deng
+      - switch.living_room_lights_switch_left
+      - switch.living_room_lights_switch_right
       - remote.ke_ting
       - media_player.ke_ting
       - light.ipad_hub
@@ -84,6 +84,9 @@ homekit:
       - light.htc_e8_hub
       - sensor.htc_e8_hub
       - media_player.htc_e8_hub
+      - light.firehd8_hub
+      - sensor.firehd8_hub
+      - media_player.firehd8_hub
       - switch.kiosk_mode
     exclude_entity_globs:
       - light.browser_mod_*

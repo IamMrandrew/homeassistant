@@ -327,7 +327,7 @@ views:
                 entities:
                   - title: 客廳
                     entities:
-                      - entity: light.ke_ting_deng_3
+                      - entity: light.ke_ting_deng
                         icon: 'mdi:coach-lamp'
                         name: 客廳燈
                         popup:
@@ -376,7 +376,7 @@ views:
                 entities:
                   - title: 其他
                     entities:
-                      - entity: media_player.htc_e8_hub
+                      - entity: media_player.firehd8_hub
                         wider: true
                       - entity: switch.kiosk_mode
                         icon: 'mdi:tablet'

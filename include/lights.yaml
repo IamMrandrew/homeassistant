@@ -6,14 +6,14 @@
   
 - platform: switch
   name: 客廳燈1
-  entity_id: switch.wall_switch_a6b8_2
+  entity_id: switch.living_room_lights_switch_left
   
 - platform: switch
   name: 客廳燈2
-  entity_id: switch.wall_switch_a6b8
+  entity_id: switch.living_room_lights_switch_right
   
 - platform: group
   name: 客廳燈
   entities:
-  - light.ke_ting_deng
+  - light.ke_ting_deng_1
   - light.ke_ting_deng_2
