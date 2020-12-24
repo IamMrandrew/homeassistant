@@ -1,6 +1,6 @@
 script.tv_on_off:
-  friendly_name: 電視
-  homebridge_name: 電視
+  friendly_name: 電視開關
+  homebridge_name: 電視開關
 script.tv_switch:
   friendly_name: 電視轉台
   homebridge_name: 電視轉台
@@ -19,6 +19,8 @@ script.tv_appletv:
 script.fan:
   friendly_name: 風扇
   homebridge_name: 風扇
+switch.tv:
+  friendly_name: 電視
 person.iammrandrew:
   friendly_name: 立仔
 person.sis:

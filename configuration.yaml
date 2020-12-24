@@ -88,10 +88,12 @@ homekit:
       - sensor.firehd8_hub
       - media_player.firehd8_hub
       - switch.kiosk_mode
+      - script.dummy      
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
+      - switch.shui_fang_tuo_ban_*
       
 input_boolean:
   bedside_lamp:
