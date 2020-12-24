@@ -20,6 +20,9 @@
     activate_fan:
       command:
         - raw:mcxm0wlkxm0zmEsmU4AIKZTcAggETmU0ARWaTUAfwKXAg8BiAQjAMICHwEPAY8CHwGfAZ8BB5lMJZM5iCp4A/gg+APYIBh/lMZjOQSWDAYCjwB/AHgDwggbmMyAMIBA5jMgm/APYIvwB0AoQCAgrPAQYDo5gD54QnheeAP4NND4tNAAyGtUDiYAA
+    dummy:
+      command:
+        - raw:mcdhaha
 
  
 

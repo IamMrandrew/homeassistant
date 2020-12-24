@@ -11,3 +11,22 @@
           data:
             navigation_path: /lovelace/homekit?disable_km
         - service: browser_mod.window_reload
+    tv:
+      turn_on:
+        - service: script.turn_on        
+          data_template:
+            entity_id: >
+              {% if is_state('input_boolean.tv_change_state', 'off') %}
+                script.tv_on_off
+              {% else %}
+                script.dummy
+              {% endif %}
+      turn_off:
+        - service: script.turn_on         
+          data_template:
+            entity_id: >
+              {% if is_state('input_boolean.tv_change_state', 'off') %}
+                script.tv_on_off
+              {% else %}
+                script.dummy
+              {% endif %}

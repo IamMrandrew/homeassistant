@@ -100,4 +100,8 @@ fan:
       entity_id: 'remote.yao_kong_qi'
       data:
         command:
-          - 'activate_fan'       
+          - 'activate_fan'     
+dummy:
+  sequence:
+    - delay: 0.1      
+    

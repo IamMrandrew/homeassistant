@@ -95,5 +95,7 @@ homekit:
       
 input_boolean:
   bedside_lamp:
-    name: Check if bedside lamp is on
+    name: Check if bedside lamp is on/ off
+  tv_change_state:
+    name: For changing tv state without action (on for no action)
 

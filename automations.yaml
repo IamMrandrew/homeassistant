@@ -277,3 +277,47 @@
     data:
       message: '{{trigger.to_state.attributes.friendly_name}}返左屋企'
   mode: single
+- id: '1608738588601'
+  alias: 自動化/ 電視狀態 切換關閉
+  description: ''
+  trigger:
+  - type: power
+    platform: device
+    device_id: 354b0d089fc751bbb913e4c779a4d719
+    entity_id: sensor.dian_shi_ji_mss310_power_sensor_w_0
+    domain: sensor
+    below: 50
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.tv_change_state
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.tv
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.tv_change_state
+  mode: single
+- id: '1608738588619'
+  alias: 自動化/ 電視狀態 切換開啟
+  description: ''
+  trigger:
+  - type: power
+    platform: device
+    device_id: 354b0d089fc751bbb913e4c779a4d719
+    entity_id: sensor.dian_shi_ji_mss310_power_sensor_w_0
+    domain: sensor
+    above: 300
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.tv_change_state
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.tv
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.tv_change_state
+  mode: single
