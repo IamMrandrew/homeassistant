@@ -1,9 +1,8 @@
-2020-12-25 03:24:40 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-25 03:24:40 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-25 03:24:40 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-25 03:24:40 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-25 03:24:55 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.709 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
-2020-12-25 03:25:01 WARNING (MainThread) [custom_components.meross_cloud] 
+2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-26 16:05:05 WARNING (MainThread) [custom_components.meross_cloud] 
 ===============================
 Meross Cloud Custom component
 Developed by Alberto Geniola
@@ -19,7 +18,7 @@ List of devices reported by HTTP API:
 - 電視機 (mss310) - OnlineStatus.ONLINE
 - 睡房拖板 (mss425e) - OnlineStatus.ONLINE
 ===============================
-2020-12-25 03:25:07 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-12-25 03:25:08 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
-2020-12-25 03:25:13 ERROR (MainThread) [homeassistant.components.device_tracker] Platform mobile_app does not generate unique IDs. ID 5146561C-1A54-4298-8C09-F335671E12ED already exists - ignoring device_tracker.andrew_de_iphone
-2020-12-25 03:25:18 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
+2020-12-26 16:05:07 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-12-26 16:05:07 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
+2020-12-26 16:05:18 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
+2020-12-26 16:05:56 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub

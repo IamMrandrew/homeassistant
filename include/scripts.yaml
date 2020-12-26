@@ -5,13 +5,20 @@ tv_on_off:
       data:
         command: 
           - 'activate_tv_on_off'
-tv_switch:
+tv_switch_tv:
   sequence:
     - service: remote.send_command
       entity_id: 'remote.yao_kong_qi'
       data:
         command: 
-          - 'activate_tv_switch'
+          - 'activate_tv_switch_tv'
+tv_switch_av:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command: 
+          - 'activate_tv_switch_av'
 tv_volume_up:
   sequence:
     - service: remote.send_command
@@ -45,55 +52,7 @@ tv_volume_down:
       entity_id: 'remote.yao_kong_qi'
       data:
         command:
-          - 'activate_tv_volume_down'
-tv_tv:
-  sequence:
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-tv_appletv:
-  sequence:
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'
-    - service: remote.send_command
-      entity_id: 'remote.yao_kong_qi'
-      data:
-        command: 'activate_tv_switch'  
+          - 'activate_tv_volume_down' 
 fan:
   sequence:
     - service: remote.send_command

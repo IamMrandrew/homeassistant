@@ -1,8 +1,4 @@
 kiosk_mode:
-  user_settings:
-    - users:
-        - guest
-      kiosk: true
     
 background: >-
   center / cover no-repeat fixed

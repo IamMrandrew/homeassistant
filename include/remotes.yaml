@@ -8,9 +8,12 @@
     activate_tv_on_off:
       command:
         - raw:mc0mUwlkxm84mEsmc5mEsmgA7TGZzUBDQB/AH8AfwB/AH8GDwB/AH8AfwB/BQ8AfwB/AH8EjwEGmkxAQOZgEeAR8smgGZAD2Ax4GXgEILwQFfgM7MIAA
-    activate_tv_switch:
+    activate_tv_switch_av:
       command:
         - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+Ch4A/gD+AP4JHgIPNAEDmAFPgD+CD4RXAIeAP4FHzCWTCAA=
+    activate_tv_switch_tv:
+      command:
+        - raw:mc0mkwlkxm82mEsmkxADKagDrMZnMwENAH8AfwB/AH8AfwYPAH8Af5ZNAoeAH8FDwEPAH8AfwB/AH8FjwYfCr8CDwQvAh8BmJkAQswgA
     activate_tv_volume_up:
       command:
         - raw:mc0mswlkxm4AhTSZABkAO0xmYBhgIUAOkxAH8B/wB/Af8AeQYPAo8A/wB/AH8FBgGPAH8FjwF/AH8AfwcPBI8AfwB/BA8EDAEImEAA==
