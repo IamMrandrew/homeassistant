@@ -1,10 +1,10 @@
->
-  .mdc-dialog__surface {
-    max-width: 300px; 
-    min-width: 260px;    
-    background-color: #FFFFF
-    background-color: #FFFFFF;
-    padding: 40px;
-    margin: 20px; 
-    border-radius: 16px;   
+.: |
+  app-toolbar {
+    background-color: #F1F1F1 !important;
+    color: #4D4D4D !important;
   }
+$: |
+  .mdc-dialog__surface {
+    border-radius: 14px !important;   
+  }
+

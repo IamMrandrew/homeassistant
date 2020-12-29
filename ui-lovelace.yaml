@@ -134,16 +134,6 @@ views:
                       - entity: switch.tv
                         icon: 'mdi:television'
                         wider: true
-                        # popup: 
-                        #   title: 電視
-                        #   type: entities
-                        #   entities: 
-                        #     - entity: switch.tv
-                        #     - entity: script.tv_volume_up
-                        #     - entity: script.tv_volume_down
-                        #     - entity: script.tv_switch_av
-                        #     - entity: script.tv_switch_tv
-                        #   style: !include template/entity-card_style.yaml
                         hold_action:
                           action: call-service
                           service: browser_mod.popup
@@ -162,26 +152,42 @@ views:
                                 - type: custom:hui-element
                                   card_type: horizontal-stack
                                   cards:
-                                  - type: custom:button-card
-                                    entity: script.tv_volume_mute
+                                  - type: custom:button-card                                    
                                     icon: mdi:volume-mute
                                     show_name: false
                                     style: !include template/button_style.yaml
+                                    tap_action:
+                                      action: call-service
+                                      service: script.turn_on
+                                      service_data:
+                                        entity_id: script.tv_volume_mute                                  
                                   - type: custom:button-card
-                                    entity: script.tv_volume_up
                                     icon: mdi:volume-medium
                                     show_name: false
                                     style: !include template/button_style.yaml
+                                    tap_action:
+                                      action: call-service
+                                      service: script.turn_on
+                                      service_data:
+                                        entity_id: script.tv_volume_down  
                                   - type: custom:button-card
-                                    entity: script.tv_volume_down
                                     icon: mdi:volume-high
                                     show_name: false
                                     style: !include template/button_style.yaml
+                                    tap_action:
+                                      action: call-service
+                                      service: script.turn_on
+                                      service_data:
+                                        entity_id: script.tv_volume_up  
                                   - type: custom:button-card
-                                    entity: script.tv_switch_av
                                     icon: mdi:import
                                     show_name: false
                                     style: !include template/button_style.yaml
+                                    tap_action:
+                                      action: call-service
+                                      service: script.turn_on
+                                      service_data:
+                                        entity_id: script.tv_switch_av  
                       - entity: media_player.ke_ting
                         wider: true
               - column: 3

@@ -321,3 +321,20 @@
     data:
       entity_id: input_boolean.tv_change_state
   mode: single
+- id: '1609243489468'
+  alias: 自動化/ 電視輸入切換
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.tv_source
+  condition: []
+  action: 
+  - service: script.turn_on
+    data:
+      entity_id: >
+        {% if is_state("input_select.tv_source", "電視直播") %}
+          script.tv_switch_tv
+        {% elif is_state("input_select.tv_source", "Apple TV") %}
+          script.tv_switch_av 
+        {% endif %}
+  mode: single
