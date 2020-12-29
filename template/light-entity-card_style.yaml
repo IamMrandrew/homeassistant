@@ -20,9 +20,12 @@ light-entity-card:
       background-color: #FFFFFF;
       padding: 40px;
       margin: 20px;
-      border-radius: 30px;      
+      border-radius: 15px;      
     }
 
     .light-entity-card__header {
       margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #4B4B4B;
     }  

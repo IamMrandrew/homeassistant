@@ -58,11 +58,15 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-card-mod/card-mod.js
       type: module
+    - url: /hacsfiles/lovelace-hui-element/hui-element.js
+      type: module
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
 
 discovery:
 
 homekit:
-  filter:
+- filter:
     exclude_domains:
       - automation
       - device_tracker
@@ -88,15 +92,25 @@ homekit:
       - sensor.firehd8_hub
       - media_player.firehd8_hub
       - switch.kiosk_mode
-      - script.dummy      
+      - script.dummy            
     exclude_entity_globs:
       - light.browser_mod_*
       - media_player.browser_mod_*
       - sensor.browser_mod_*
       - switch.shui_fang_tuo_ban_*
+  entity_config:
+    switch.tv:
+      type: outlet
       
 input_boolean:
   bedside_lamp:
-    name: Check if bedside lamp is on/ off
+    name: 床頭燈狀態
   tv_change_state:
-    name: For changing tv state without action (on for no action)
+    name: 更新電視狀態 (on for no action)
+input_select:
+  tv_source:
+    name: 切換輸入
+    options:
+      - 電視直播
+      - Apple TV
+    icon: mdi:import
