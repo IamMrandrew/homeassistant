@@ -20,6 +20,9 @@
     activate_tv_volume_down:
       command:
         - raw:mc0mswlkxm82mEsmkxADIAwgBzmMzmQCGgD+AP4A/gD+AP4MHgD+AP4A/gD+CgUzAY8AfwB/AH8EjwIPAo8Cjw2/AY8AfwKPAQqYQAA=
+    activate_tv_volume_mute:
+      command:
+        - raw:mc0mswlkxm4AhTSZABkAO0xmYBlADwAGc0AH4BtwF/AXsBvwYIBk8CjwUPBo8GCpjMpyFj4IHgH+Af4B9CJmCggEHhdWGH4KXgQUCmwEjhWQDJIvHzCAAA==
     activate_fan:
       command:
         - raw:mcxm0wlkxm0zmEsmU4AIKZTcAggETmU0ARWaTUAfwKXAg8BiAQjAMICHwEPAY8CHwGfAZ8BB5lMJZM5iCp4A/gg+APYIBh/lMZjOQSWDAYCjwB/AHgDwggbmMyAMIBA5jMgm/APYIvwB0AoQCAgrPAQYDo5gD54QnheeAP4NND4tNAAyGtUDiYAA

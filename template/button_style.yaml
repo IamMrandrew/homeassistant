@@ -1,0 +1,14 @@
+|
+  ha-card {
+    border-radius: 12px;
+    background-color: #F1F1F1;
+    min-height: 60px;
+    box-shadow: none;
+    max-width: 70px
+  }
+
+  ha-icon {
+    color: #AAABAD !important;
+    width: 50%
+  }
+  

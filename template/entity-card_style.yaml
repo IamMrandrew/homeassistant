@@ -1,0 +1,6 @@
+hui-horizontal-stack-card:
+  $: |
+    #root {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }

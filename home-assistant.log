@@ -1,8 +1,9 @@
-2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-26 16:04:44 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-26 16:05:05 WARNING (MainThread) [custom_components.meross_cloud] 
+2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 17:03:13 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.494 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
+2020-12-29 17:03:15 WARNING (MainThread) [custom_components.meross_cloud] 
 ===============================
 Meross Cloud Custom component
 Developed by Alberto Geniola
@@ -18,7 +19,91 @@ List of devices reported by HTTP API:
 - 電視機 (mss310) - OnlineStatus.ONLINE
 - 睡房拖板 (mss425e) - OnlineStatus.ONLINE
 ===============================
-2020-12-26 16:05:07 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-12-26 16:05:07 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
-2020-12-26 16:05:18 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
-2020-12-26 16:05:56 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
+2020-12-29 17:03:21 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-12-29 17:03:22 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
+2020-12-29 17:03:22 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-12-29 17:03:32 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
+2020-12-29 17:38:24 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:16:2 TypeError: null is not an object (evaluating 'h.shadowRoot.querySelector("home-assistant-main"
+).shadowRoot')
+2020-12-29 17:51:07 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:17 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 18:11:18 WARNING (SyncWorker_7) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:11:24 ERROR (MainThread) [custom_components.hacs] Error trying to serve Homekit-panel-card/homekit-panel-card.js
+Traceback (most recent call last):
+  File "/config/custom_components/hacs/webresponses/category.py", line 22, in async_serve_category_file
+    response = await async_serve_static_file_with_etag(
+  File "/config/custom_components/hacs/webresponses/category.py", line 52, in async_serve_static_file_with_etag
+    etag = await async_get_etag(servefile)
+  File "/config/custom_components/hacs/helpers/functions/file_etag.py", line 18, in async_get_etag
+    fnv = await hass.async_add_executor_job(get_etag, path)
+asyncio.exceptions.CancelledError
+2020-12-29 18:11:24 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:14:54 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:23:09 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:23:37 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:24:17 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:26:07 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:26:19 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:26:31 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:27:15 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:27:22 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:28:32 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:28:37 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:30:32 ERROR (SyncWorker_13) [homeassistant.util.yaml.loader] mapping values are not allowed here
+  in "/config/template/entity-card_style.yaml", line 3, column 14
+2020-12-29 18:30:35 ERROR (SyncWorker_14) [homeassistant.util.yaml.loader] mapping values are not allowed here
+  in "/config/template/entity-card_style.yaml", line 3, column 14
+2020-12-29 18:31:30 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:31:30 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:31:41 WARNING (SyncWorker_2) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:32:33 WARNING (SyncWorker_16) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:55:59 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 18:59:48 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
+2020-12-29 19:01:02 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:01:21 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:02:05 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:02:23 WARNING (SyncWorker_16) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:05:36 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:05:43 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:07:26 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:08:07 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:09:18 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:09:59 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:14:05 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:14:18 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:14:56 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:15:40 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:19:28 WARNING (SyncWorker_1) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:20:28 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:25:03 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:25:51 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:29:44 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:30:13 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:32:01 WARNING (SyncWorker_7) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
+2020-12-29 19:34:08 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:34:08 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:34:16 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/frontend_latest/chunk.6b18c64ed740014d3f00.js:1:8122 YAMLException: unacceptable kind of an object to dump [object Undefined]
+2020-12-29 19:35:18 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:35:44 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152

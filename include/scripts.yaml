@@ -19,6 +19,13 @@ tv_switch_av:
       data:
         command: 
           - 'activate_tv_switch_av'
+tv_volume_mute:
+  sequence:
+    - service: remote.send_command
+      entity_id: 'remote.yao_kong_qi'
+      data:
+        command:
+          - 'activate_tv_volume_mute'
 tv_volume_up:
   sequence:
     - service: remote.send_command
