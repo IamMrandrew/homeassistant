@@ -1,9 +1,10 @@
-2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-29 17:03:00 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-12-29 17:03:13 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for remote.yao_kong_qi (<class 'homeassistant.components.xiaomi_miio.remote.XiaomiMiioRemote'>) took 0.494 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+xiaomi_miio%22
-2020-12-29 17:03:15 WARNING (MainThread) [custom_components.meross_cloud] 
+2020-12-29 19:36:54 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for meross_cloud which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 19:36:54 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 19:36:55 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 19:36:55 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for browser_mod which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-12-29 19:37:06 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:37:13 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/2.0/complete returned 
+2020-12-29 19:37:15 WARNING (MainThread) [custom_components.meross_cloud] 
 ===============================
 Meross Cloud Custom component
 Developed by Alberto Geniola
@@ -19,27 +20,56 @@ List of devices reported by HTTP API:
 - 電視機 (mss310) - OnlineStatus.ONLINE
 - 睡房拖板 (mss425e) - OnlineStatus.ONLINE
 ===============================
-2020-12-29 17:03:21 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
-2020-12-29 17:03:22 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
-2020-12-29 17:03:22 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
-2020-12-29 17:03:32 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
-2020-12-29 17:38:24 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:16:2 TypeError: null is not an object (evaluating 'h.shadowRoot.querySelector("home-assistant-main"
-).shadowRoot')
-2020-12-29 17:51:07 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:17 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:18 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
-2020-12-29 18:11:18 WARNING (SyncWorker_7) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:11:24 ERROR (MainThread) [custom_components.hacs] Error trying to serve Homekit-panel-card/homekit-panel-card.js
+2020-12-29 19:37:29 WARNING (MainThread) [homeassistant.components.media_player] Setup of media_player platform apple_tv is taking over 10 seconds.
+2020-12-29 19:37:29 WARNING (MainThread) [homeassistant.components.remote] Setup of remote platform apple_tv is taking over 10 seconds.
+2020-12-29 19:37:29 WARNING (MainThread) [homeassistant.components.sensor] Setup of sensor platform ipp is taking over 10 seconds.
+2020-12-29 19:37:29 WARNING (MainThread) [homeassistant.components.weather] Setup of weather platform met is taking over 10 seconds.
+2020-12-29 19:37:30 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:30 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 ERROR (MainThread) [frontend.js.latest.202012120] http://hassio.local:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:15 Uncaught TypeError: Cannot read property 'config' of undefined
+2020-12-29 19:37:31 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-12-29 19:37:32 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
+2020-12-29 19:37:32 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-12-29 19:37:42 WARNING (MainThread) [homeassistant.components.switch] Setup of switch platform meross_cloud is taking over 10 seconds.
+2020-12-29 19:39:39 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:41:41 WARNING (SyncWorker_1) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:41:49 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:42:25 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:42:51 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:45:12 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:45:38 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:46:02 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:46:24 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:46:30 WARNING (SyncWorker_1) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:46:58 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:48:15 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:48:29 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:48:41 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:48:50 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:49:14 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:49:38 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:49:54 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:50:03 WARNING (SyncWorker_7) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:50:18 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:56:10 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:58:14 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 19:58:45 WARNING (MainThread) [homeassistant.components.script.tv_volume_down] tv_volume_down: Already running
+2020-12-29 19:58:46 WARNING (MainThread) [homeassistant.components.script.tv_volume_down] tv_volume_down: Already running
+2020-12-29 19:58:52 WARNING (MainThread) [homeassistant.components.script.tv_volume_up] tv_volume_up: Already running
+2020-12-29 19:58:52 WARNING (MainThread) [homeassistant.components.script.tv_volume_up] tv_volume_up: Already running
+2020-12-29 19:59:26 WARNING (MainThread) [homeassistant.components.script.tv_switch_av] tv_switch_av: Already running
+2020-12-29 20:07:58 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: invalid template (TemplateSyntaxError: unexpected ':') for dictionary value @ data['action'][0]['data']. Got None. (See /config/configuration.yaml, line 19). 
+2020-12-29 20:10:48 WARNING (SyncWorker_0) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 140 and 142
+2020-12-29 20:18:09 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
+2020-12-29 20:22:10 ERROR (MainThread) [custom_components.hacs] Error trying to serve light-entity-card/light-entity-card.js
 Traceback (most recent call last):
   File "/config/custom_components/hacs/webresponses/category.py", line 22, in async_serve_category_file
     response = await async_serve_static_file_with_etag(
@@ -48,62 +78,257 @@ Traceback (most recent call last):
   File "/config/custom_components/hacs/helpers/functions/file_etag.py", line 18, in async_get_etag
     fnv = await hass.async_add_executor_job(get_etag, path)
 asyncio.exceptions.CancelledError
-2020-12-29 18:11:24 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:14:54 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:23:09 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:23:37 WARNING (SyncWorker_9) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:24:17 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:26:07 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:26:19 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:26:31 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:27:15 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:27:22 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:28:32 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:28:37 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:30:32 ERROR (SyncWorker_13) [homeassistant.util.yaml.loader] mapping values are not allowed here
-  in "/config/template/entity-card_style.yaml", line 3, column 14
-2020-12-29 18:30:35 ERROR (SyncWorker_14) [homeassistant.util.yaml.loader] mapping values are not allowed here
-  in "/config/template/entity-card_style.yaml", line 3, column 14
-2020-12-29 18:31:30 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:31:30 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:31:41 WARNING (SyncWorker_2) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:32:33 WARNING (SyncWorker_16) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:55:59 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 18:59:48 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities media_player.htc_e8_hub
-2020-12-29 19:01:02 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:01:21 WARNING (SyncWorker_4) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:02:05 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:02:23 WARNING (SyncWorker_16) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:05:36 WARNING (SyncWorker_6) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:05:43 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:07:26 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:08:07 WARNING (SyncWorker_13) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:09:18 WARNING (SyncWorker_5) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:09:59 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:14:05 WARNING (SyncWorker_8) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:14:18 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:14:56 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:15:40 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:19:28 WARNING (SyncWorker_1) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:20:28 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:25:03 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:25:51 WARNING (SyncWorker_12) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:29:44 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:30:13 WARNING (SyncWorker_11) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:32:01 WARNING (SyncWorker_7) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:05 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:06 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/hacsfiles/kiosk-mode/kiosk-mode.js:18:14 TypeError: undefined is not an object (evaluating 'e.lovelace.config')
-2020-12-29 19:34:08 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:34:08 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:34:16 ERROR (MainThread) [frontend.js.latest.202012120] http://192.168.1.17:8123/frontend_latest/chunk.6b18c64ed740014d3f00.js:1:8122 YAMLException: unacceptable kind of an object to dump [object Undefined]
-2020-12-29 19:35:18 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
-2020-12-29 19:35:44 WARNING (SyncWorker_15) [homeassistant.util.yaml.loader] YAML file /config/ui-lovelace.yaml contains duplicate key "title". Check lines 150 and 152
+2020-12-29 20:22:10 ERROR (MainThread) [custom_components.hacs] Error trying to serve mini-media-player/mini-media-player-bundle.js
+Traceback (most recent call last):
+  File "/config/custom_components/hacs/webresponses/category.py", line 22, in async_serve_category_file
+    response = await async_serve_static_file_with_etag(
+  File "/config/custom_components/hacs/webresponses/category.py", line 52, in async_serve_static_file_with_etag
+    etag = await async_get_etag(servefile)
+  File "/config/custom_components/hacs/helpers/functions/file_etag.py", line 18, in async_get_etag
+    fnv = await hass.async_add_executor_job(get_etag, path)
+asyncio.exceptions.CancelledError
+2020-12-29 20:22:10 ERROR (MainThread) [custom_components.hacs] Error trying to serve Homekit-panel-card/homekit-panel-card.js
+Traceback (most recent call last):
+  File "/config/custom_components/hacs/webresponses/category.py", line 22, in async_serve_category_file
+    response = await async_serve_static_file_with_etag(
+  File "/config/custom_components/hacs/webresponses/category.py", line 52, in async_serve_static_file_with_etag
+    etag = await async_get_etag(servefile)
+  File "/config/custom_components/hacs/helpers/functions/file_etag.py", line 18, in async_get_etag
+    fnv = await hass.async_add_executor_job(get_etag, path)
+asyncio.exceptions.CancelledError
+2020-12-29 20:22:10 ERROR (MainThread) [custom_components.hacs] Error trying to serve light-popup-card/light-popup-card.js
+Traceback (most recent call last):
+  File "/config/custom_components/hacs/webresponses/category.py", line 22, in async_serve_category_file
+    response = await async_serve_static_file_with_etag(
+  File "/config/custom_components/hacs/webresponses/category.py", line 52, in async_serve_static_file_with_etag
+    etag = await async_get_etag(servefile)
+  File "/config/custom_components/hacs/helpers/functions/file_etag.py", line 18, in async_get_etag
+    fnv = await hass.async_add_executor_job(get_etag, path)
+asyncio.exceptions.CancelledError
+2020-12-29 20:44:03 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "e5cd61cdae5edc8f047d21d35554449e", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "7322f464cb1942761616d733bf33204a", "timestamp": 1609245839, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:03 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 288, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:44:09 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "640d42c80f64f106ba1e8dc3e21bed1d", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "7b316d2d67f4356ebad1635d79a931ce", "timestamp": 1609245844, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:09 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 322, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:44:13 WARNING (MainThread) [custom_components.apple_tv] Connection lost to Apple TV "客廳"
+2020-12-29 20:44:13 WARNING (MainThread) [homeassistant.components.sensor] Updating meross_cloud sensor took longer than the scheduled update interval 0:00:15
+2020-12-29 20:44:14 ERROR (MainThread) [homeassistant.components.upnp] Timeout fetching RBR50 (Gateway) data
+2020-12-29 20:44:14 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "d00a145529623076d1c4fd663f0be1dd", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "fa7851de6eb3248379f7b9f5c45a746e", "timestamp": 1609245849, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:14 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 357, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:44:16 ERROR (SyncWorker_5) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
+2020-12-29 20:44:16 ERROR (SyncWorker_8) [homeassistant.components.yeelight] Unable to update device 192.168.1.4, 燈3: Bulb closed the connection.
+2020-12-29 20:44:18 ERROR (SyncWorker_6) [homeassistant.components.yeelight] Unable to update device 192.168.1.3, yeelight_ceiling1_0x0000000007c50fc5: Bulb closed the connection.
+2020-12-29 20:44:33 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "485967f124db7625316735337ae9aab9", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "06d63b8cceba8e61cf99b9c0039d7948", "timestamp": 1609245869, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:33 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 288, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:44:35 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-12-29 20:44:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player tv.viu.viutv
+2020-12-29 20:44:36 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.netflix.Netflix
+2020-12-29 20:44:36 ERROR (MainThread) [homeassistant.components.ipp] Error fetching ipp data: Invalid response from API: Error occurred while communicating with IPP server.
+2020-12-29 20:44:39 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "3d58f23038d520fc7e5c8a14d73381b4", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "acc0613f06537d208dc1d78103900a61", "timestamp": 1609245874, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:39 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 322, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:44:40 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Main channel reported online event.
+2020-12-29 20:44:40 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 1 reported online event.
+2020-12-29 20:44:40 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 2 reported online event.
+2020-12-29 20:44:40 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 3 reported online event.
+2020-12-29 20:44:40 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - USB reported online event.
+2020-12-29 20:44:43 WARNING (MainThread) [homeassistant.components.sensor] Updating meross_cloud sensor took longer than the scheduled update interval 0:00:15
+2020-12-29 20:44:44 ERROR (MainThread) [meross_iot.manager] Timeout occurred while waiting a response for message b'{"header": {"from": "/app/1017654-406cc40cad1a99bff0f1ac40a4f48058/subscribe", "messageId": "ddfd6d7365a0e0b5d102ba48c0f62ebc", "method": "GET", "namespace": "Appliance.Control.Electricity", "payloadVersion": 1, "sign": "0382c5b9641894a1b2241cd285674327", "timestamp": 1609245879, "triggerSrc": "Android"}, "payload": {"channel": 0}}' sent to device uuid 20062994352608251h4948e1e9225f37. Timeout was: 5 seconds.
+2020-12-29 20:44:44 ERROR (MainThread) [custom_components.meross_cloud.sensor] Error occurred.
+-------------------------------------
+Component version: 0.4.1.0rc7
+Device info: 
+	Name: 電視機
+	UUID: 20062994352608251h4948e1e9225f37
+	Type: mss310
+	HW Version: 2.0.0
+	FW Version: 2.1.14
+Error Message: "An exception occurred"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 630, in _async_send_and_wait_ack
+    return await asyncio.wait_for(future, timeout, loop=self._loop)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 498, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/custom_components/meross_cloud/sensor.py", line 357, in async_update
+    await self._device.async_get_instant_metrics(channel=self._channel_id)
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/mixins/electricity.py", line 38, in async_get_instant_metrics
+    result = await self._execute_command(method="GET",
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/controller/device.py", line 227, in _execute_command
+    return await self._manager.async_execute_cmd(destination_device_uuid=self.uuid,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 621, in async_execute_cmd
+    response = await self._async_send_and_wait_ack(future=fut,
+  File "/usr/local/lib/python3.8/site-packages/meross_iot/manager.py", line 634, in _async_send_and_wait_ack
+    raise CommandTimeoutError()
+meross_iot.model.exception.CommandTimeoutError
+2020-12-29 20:46:04 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Main channel reported online event.
+2020-12-29 20:46:04 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 1 reported online event.
+2020-12-29 20:46:04 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 2 reported online event.
+2020-12-29 20:46:04 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 3 reported online event.
+2020-12-29 20:46:04 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - USB reported online event.
+2020-12-29 20:49:16 ERROR (SyncWorker_9) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
+2020-12-29 20:49:41 ERROR (SyncWorker_0) [homeassistant.components.yeelight] Unable to update device 192.168.1.4, 燈3: Bulb closed the connection.
+2020-12-29 20:50:36 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Main channel reported online event.
+2020-12-29 20:50:36 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 1 reported online event.
+2020-12-29 20:50:36 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 2 reported online event.
+2020-12-29 20:50:36 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 3 reported online event.
+2020-12-29 20:50:36 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - USB reported online event.
+2020-12-29 20:57:11 ERROR (SyncWorker_4) [homeassistant.components.yeelight] Unable to update device 192.168.1.4, 燈3: Bulb closed the connection.
+2020-12-29 20:57:16 ERROR (SyncWorker_2) [homeassistant.components.yeelight] Unable to update device 192.168.1.5, yeelight_ceiling1_0x0000000007c51949: Bulb closed the connection.
+2020-12-29 20:57:31 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Main channel reported online event.
+2020-12-29 20:57:31 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 1 reported online event.
+2020-12-29 20:57:31 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 2 reported online event.
+2020-12-29 20:57:31 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - Switch 3 reported online event.
+2020-12-29 20:57:31 WARNING (MainThread) [custom_components.meross_cloud.switch] Device 睡房拖板 (mss425e) - USB reported online event.

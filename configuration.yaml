@@ -111,6 +111,7 @@ input_select:
   tv_source:
     name: 切換輸入
     options:
+      - 輸入來源
       - 電視直播
-      - Apple TV
+      - Apple TV    
     icon: mdi:import

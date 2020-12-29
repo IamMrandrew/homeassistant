@@ -336,5 +336,11 @@
           script.tv_switch_tv
         {% elif is_state("input_select.tv_source", "Apple TV") %}
           script.tv_switch_av 
+        {% elif is_state("input_select.tv_source", "輸入來源") %}
+          script.dummy
         {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.tv_source
+      option: 輸入來源
   mode: single
